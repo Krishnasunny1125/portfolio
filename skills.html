@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Skills — Krishna Vamsi Prathipati | Python, PyTorch, YOLOv8, Deep Learning, MLOps</title>
+<meta name="description" content="Technical skills: Python, PyTorch, TensorFlow, YOLOv8, Vision Transformers, OpenCV, Flask, GPT-4, NLTK, SQL, Git. Deep Learning & MLOps specialist.">
+<meta name="keywords" content="Krishna Vamsi Prathipati, AI engineer, ML engineer, deep learning, computer vision, YOLOv8, PyTorch, Vision Transformers, Python, Flask, GPT-4, NLTK, IEEE researcher, Vijayawada, Andhra Pradesh, fresher 2026, AI internship, ML internship">
+<meta name="author" content="Krishna Vamsi Prathipati">
+<meta name="robots" content="index, follow">
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="Technical Skills — Krishna Vamsi Prathipati">
+<meta property="og:description" content="Technical skills: Python, PyTorch, TensorFlow, YOLOv8, Vision Transformers, OpenCV, Flask, GPT-4, NLTK, SQL, Git. Deep Learning & MLOps specialist.">
+<meta property="og:url" content="https://krishnavamsi.dev/skills.html">
+<meta property="og:image" content="https://krishnavamsi.dev/og-image.png">
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Technical Skills — Krishna Vamsi Prathipati">
+<meta name="twitter:description" content="Technical skills: Python, PyTorch, TensorFlow, YOLOv8, Vision Transformers, OpenCV, Flask, GPT-4, NLTK, SQL, Git. Deep Learning & MLOps specialist.">
+<link rel="canonical" href="https://krishnavamsi.dev/skills.html">
+<link rel="stylesheet" href="style.css">
+<style>
+.skills-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+}
+.skills-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1.75rem;
+  box-shadow: var(--shadow-sm);
+}
+.skills-card-title {
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  padding-bottom: 0.85rem;
+  border-bottom: 1px solid var(--border);
+  margin-bottom: 1.4rem;
+}
+.skills-card-title span {
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  background: var(--navy);
+  color: #fff;
+  border-radius: 4px;
+  text-align: center;
+  line-height: 24px;
+  font-size: 0.75rem;
+  margin-right: 0.5rem;
+  vertical-align: middle;
+}
+.tools-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 1.5rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--border);
+}
+.tool-chip {
+  font-size: 0.8rem;
+  font-weight: 500;
+  padding: 0.3rem 0.75rem;
+  border-radius: var(--radius-sm);
+  background: var(--bg);
+  border: 1px solid var(--border-strong);
+  color: var(--text-secondary);
+}
+
+/* Stats row */
+.stats-row {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+/* Cert row */
+.certs-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+  margin-top: 2rem;
+}
+.cert-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1.25rem 1.5rem;
+  display: flex;
+  align-items: flex-start;
+  gap: 0.85rem;
+  transition: box-shadow var(--transition);
+}
+.cert-card:hover { box-shadow: var(--shadow); }
+.cert-icon {
+  width: 36px; height: 36px;
+  background: var(--tag-bg);
+  border: 1px solid #bfdbfe;
+  border-radius: var(--radius-sm);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  flex-shrink: 0;
+}
+.cert-name {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--text);
+  margin-bottom: 0.2rem;
+  line-height: 1.35;
+}
+.cert-issuer {
+  font-size: 0.78rem;
+  color: var(--text-muted);
+}
+
+@media(max-width:768px){
+  .skills-layout{grid-template-columns:1fr}
+  .stats-row{grid-template-columns:repeat(2,1fr)}
+}
+@media(max-width:480px){
+  .stats-row{grid-template-columns:1fr 1fr}
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <a href="index.html" class="nav-brand">Krishna Vamsi <span>Prathipati</span></a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="skills.html" class="active">Skills</a></li>
+      <li><a href="resume.html">Resume</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <button class="nav-hamburger" onclick="toggleNav()" aria-label="Menu">&#9776;</button>
+  </div>
+</nav>
+<div class="nav-mobile" id="nav-mobile">
+  <a href="index.html">Home</a>
+  <a href="about.html">About</a>
+  <a href="projects.html">Projects</a>
+  <a href="skills.html" class="active">Skills</a>
+  <a href="resume.html">Resume</a>
+  <a href="contact.html">Contact</a>
+</div>
+<div class="otw-strip">
+  <span class="otw-dot"></span>
+  Open to Work &mdash; Graduating May 2026 &mdash; AI / ML / Computer Vision Roles &amp; Research Internships
+  <a href="contact.html">Get in Touch &rarr;</a>
+</div>
+
+
+<div class="page-header">
+  <div class="container">
+    <div class="page-header-tag">Technical Capabilities</div>
+    <h1>Skills</h1>
+    <p>Core tools and frameworks used to build and deploy AI systems.</p>
+  </div>
+</div>
+
+<div class="main">
+  <div class="container">
+
+    <!-- Stats -->
+    <div class="stats-row">
+      <div class="stat-box reveal">
+        <span class="stat-num">4+</span>
+        <div class="stat-lbl">Projects Built</div>
+      </div>
+      <div class="stat-box reveal">
+        <span class="stat-num">95%+</span>
+        <div class="stat-lbl">Model Accuracy</div>
+      </div>
+      <div class="stat-box reveal">
+        <span class="stat-num">1</span>
+        <div class="stat-lbl">IEEE Publication</div>
+      </div>
+      <div class="stat-box reveal">
+        <span class="stat-num">8.85</span>
+        <div class="stat-lbl">CGPA</div>
+      </div>
+    </div>
+
+    <!-- Skills cards grid -->
+    <div class="skills-layout">
+
+      <!-- Deep Learning -->
+      <div class="skills-card reveal">
+        <div class="skills-card-title"><span>🧠</span>Deep Learning</div>
+        <div class="progress-wrap">
+          <div class="progress-label"><span>PyTorch</span><span class="progress-pct">95%</span></div>
+          <div class="progress-track"><div class="progress-fill" data-w="95"></div></div>
+        </div>
+        <div class="progress-wrap">
+          <div class="progress-label"><span>TensorFlow</span><span class="progress-pct">90%</span></div>
+          <div class="progress-track"><div class="progress-fill" data-w="90"></div></div>
+        </div>
+        <div class="progress-wrap">
+          <div class="progress-label"><span>OpenCV / Computer Vision</span><span class="progress-pct">90%</span></div>
+          <div class="progress-track"><div class="progress-fill" data-w="90"></div></div>
+        </div>
+        <div class="progress-wrap">
+          <div class="progress-label"><span>YOLOv8 / Object Detection</span><span class="progress-pct">93%</span></div>
+          <div class="progress-track"><div class="progress-fill" data-w="93"></div></div>
+        </div>
+        <div class="progress-wrap">
+          <div class="progress-label"><span>Vision Transformers (ViT)</span><span class="progress-pct">88%</span></div>
+          <div class="progress-track"><div class="progress-fill" data-w="88"></div></div>
+        </div>
+      </div>
+
+      <!-- Programming -->
+      <div class="skills-card reveal">
+        <div class="skills-card-title"><span>💻</span>Programming & Data Science</div>
+        <div class="progress-wrap">
+          <div class="progress-label"><span>Python (Pandas / NumPy / sklearn)</span><span class="progress-pct">94%</span></div>
+          <div class="progress-track"><div class="progress-fill" data-w="94"></div></div>
+        </div>
+        <div class="progress-wrap">
+          <div class="progress-label"><span>SQL / MySQL</span><span class="progress-pct">78%</span></div>
+          <div class="progress-track"><div class="progress-fill" data-w="78"></div></div>
+        </div>
+        <div class="progress-wrap">
+          <div class="progress-label"><span>Java / C</span><span class="progress-pct">70%</span></div>
+          <div class="progress-track"><div class="progress-fill" data-w="70"></div></div>
+        </div>
+        <div class="progress-wrap">
+          <div class="progress-label"><span>Matplotlib / Seaborn</span><span class="progress-pct">85%</span></div>
+          <div class="progress-track"><div class="progress-fill" data-w="85"></div></div>
+        </div>
+        <div class="progress-wrap">
+          <div class="progress-label"><span>Power BI / Tableau</span><span class="progress-pct">72%</span></div>
+          <div class="progress-track"><div class="progress-fill" data-w="72"></div></div>
+        </div>
+      </div>
+
+      <!-- NLP -->
+      <div class="skills-card reveal">
+        <div class="skills-card-title"><span>🤖</span>NLP & Generative AI</div>
+        <div class="progress-wrap">
+          <div class="progress-label"><span>Prompt Engineering</span><span class="progress-pct">87%</span></div>
+          <div class="progress-track"><div class="progress-fill" data-w="87"></div></div>
+        </div>
+        <div class="progress-wrap">
+          <div class="progress-label"><span>LLM API Integration (GPT-4)</span><span class="progress-pct">85%</span></div>
+          <div class="progress-track"><div class="progress-fill" data-w="85"></div></div>
+        </div>
+        <div class="progress-wrap">
+          <div class="progress-label"><span>NLTK / Sentiment Analysis</span><span class="progress-pct">80%</span></div>
+          <div class="progress-track"><div class="progress-fill" data-w="80"></div></div>
+        </div>
+        <div class="progress-wrap">
+          <div class="progress-label"><span>Text Classification</span><span class="progress-pct">78%</span></div>
+          <div class="progress-track"><div class="progress-fill" data-w="78"></div></div>
+        </div>
+      </div>
+
+      <!-- Deployment -->
+      <div class="skills-card reveal">
+        <div class="skills-card-title"><span>🚀</span>Deployment & MLOps</div>
+        <div class="progress-wrap">
+          <div class="progress-label"><span>Git / GitHub</span><span class="progress-pct">88%</span></div>
+          <div class="progress-track"><div class="progress-fill" data-w="88"></div></div>
+        </div>
+        <div class="progress-wrap">
+          <div class="progress-label"><span>Flask / RESTful APIs</span><span class="progress-pct">85%</span></div>
+          <div class="progress-track"><div class="progress-fill" data-w="85"></div></div>
+        </div>
+        <div class="progress-wrap">
+          <div class="progress-label"><span>RPA / Workflow Automation</span><span class="progress-pct">68%</span></div>
+          <div class="progress-track"><div class="progress-fill" data-w="68"></div></div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Tools & Frameworks -->
+    <div class="skills-card reveal" style="margin-top:1.5rem;">
+      <div class="skills-card-title" style="margin-bottom:.75rem;">All Tools &amp; Technologies</div>
+      <div class="tools-grid" style="margin-top:0;padding-top:0;border-top:none;">
+        <span class="tool-chip">Python</span>
+        <span class="tool-chip">PyTorch</span>
+        <span class="tool-chip">TensorFlow</span>
+        <span class="tool-chip">YOLOv8</span>
+        <span class="tool-chip">Vision Transformers</span>
+        <span class="tool-chip">OpenCV</span>
+        <span class="tool-chip">Haar Cascades</span>
+        <span class="tool-chip">GLCM</span>
+        <span class="tool-chip">CLAHE</span>
+        <span class="tool-chip">NumPy</span>
+        <span class="tool-chip">Pandas</span>
+        <span class="tool-chip">scikit-learn</span>
+        <span class="tool-chip">Matplotlib</span>
+        <span class="tool-chip">Seaborn</span>
+        <span class="tool-chip">Flask</span>
+        <span class="tool-chip">REST APIs</span>
+        <span class="tool-chip">GPT-4 API</span>
+        <span class="tool-chip">NLTK</span>
+        <span class="tool-chip">SQL / MySQL</span>
+        <span class="tool-chip">Java</span>
+        <span class="tool-chip">Git / GitHub</span>
+        <span class="tool-chip">Power BI</span>
+        <span class="tool-chip">Tableau</span>
+        <span class="tool-chip">Excel</span>
+        <span class="tool-chip">RPA</span>
+        <span class="tool-chip">Telegram API</span>
+      </div>
+    </div>
+
+    <!-- Certifications -->
+    <div style="margin-top:2.5rem;" class="reveal">
+      <p class="section-label" style="margin-bottom:.5rem;">Certifications &amp; Achievements</p>
+      <h2 class="section-title">Recognised For</h2>
+      <div class="certs-grid">
+        <div class="cert-card">
+          <div class="cert-icon">📄</div>
+          <div>
+            <div class="cert-name">IEEE INSPECT 2024</div>
+            <div class="cert-issuer">Published Researcher · DOI verified</div>
+          </div>
+        </div>
+        <div class="cert-card">
+          <div class="cert-icon">🏆</div>
+          <div>
+            <div class="cert-name">Smart India Hackathon 2023</div>
+            <div class="cert-issuer">National Finalist · Govt. of India</div>
+          </div>
+        </div>
+        <div class="cert-card">
+          <div class="cert-icon">🎓</div>
+          <div>
+            <div class="cert-name">Infosys AI / Deep Learning</div>
+            <div class="cert-issuer">Infosys Springboard · Certified</div>
+          </div>
+        </div>
+        <div class="cert-card">
+          <div class="cert-icon">🗄️</div>
+          <div>
+            <div class="cert-name">Oracle Database</div>
+            <div class="cert-issuer">Oracle · Certified</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<footer>
+  <p style="margin-bottom:.4rem;">
+    <strong style="color:#93c5fd;">Krishna Vamsi Prathipati</strong> &mdash;
+    AI &amp; Data Science Engineer &mdash; Vijayawada, Andhra Pradesh, India
+  </p>
+  <p style="margin-bottom:.75rem;">
+    Python &bull; PyTorch &bull; YOLOv8 &bull; Vision Transformers &bull; Deep Learning &bull; MLOps &bull; Flask &bull; GPT-4 &bull; Computer Vision
+  </p>
+  <p>
+    <a href="mailto:krishnavamsi1017@gmail.com">krishnavamsi1017@gmail.com</a> &nbsp;&bull;&nbsp;
+    <a href="tel:+919491710154">+91 94917 10154</a> &nbsp;&bull;&nbsp;
+    <a href="https://linkedin.com/in/KrishnaVamsiPrathipati" target="_blank" rel="noopener">LinkedIn</a> &nbsp;&bull;&nbsp;
+    <a href="https://github.com/Krishnasunny1125" target="_blank" rel="noopener">GitHub</a> &nbsp;&bull;&nbsp;
+    <a href="resume.html">Resume</a> &nbsp;&bull;&nbsp;
+    <a href="https://doi.org/10.1109/INSPECT63485.2024.10896234" target="_blank" rel="noopener">IEEE Paper</a>
+  </p>
+</footer>
+
+<script>
+function toggleNav(){document.getElementById('nav-mobile').classList.toggle('open')}
+
+const ro=new IntersectionObserver(entries=>{
+  entries.forEach((el,i)=>{
+    if(el.isIntersecting){
+      setTimeout(()=>{
+        el.target.classList.add('in');
+        el.target.querySelectorAll('.progress-fill').forEach(bar=>{
+          bar.style.width=bar.dataset.w+'%';
+        });
+      }, i*90);
+      ro.unobserve(el.target);
+    }
+  });
+},{threshold:.1});
+document.querySelectorAll('.reveal').forEach(el=>ro.observe(el));
+</script>
+</body>
+</html>

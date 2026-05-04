@@ -1,0 +1,859 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact — Krishna Vamsi Prathipati | Available for AI/ML Roles 2026</title>
+<meta name="description" content="Contact Krishna Vamsi Prathipati. Available for AI/ML engineering roles and research internships. Graduating May 2026. Vijayawada, Andhra Pradesh.">
+<meta name="keywords" content="Krishna Vamsi Prathipati, AI engineer, ML engineer, deep learning, computer vision, YOLOv8, PyTorch, Vision Transformers, Python, Flask, GPT-4, NLTK, IEEE researcher, Vijayawada, Andhra Pradesh, fresher 2026, AI internship, ML internship">
+<meta name="author" content="Krishna Vamsi Prathipati">
+<meta name="robots" content="index, follow">
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="Contact Krishna Vamsi Prathipati">
+<meta property="og:description" content="Contact Krishna Vamsi Prathipati. Available for AI/ML engineering roles and research internships. Graduating May 2026. Vijayawada, Andhra Pradesh.">
+<meta property="og:url" content="https://krishnavamsi.dev/contact.html">
+<meta property="og:image" content="https://krishnavamsi.dev/og-image.png">
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Contact Krishna Vamsi Prathipati">
+<meta name="twitter:description" content="Contact Krishna Vamsi Prathipati. Available for AI/ML engineering roles and research internships. Graduating May 2026. Vijayawada, Andhra Pradesh.">
+<link rel="canonical" href="https://krishnavamsi.dev/contact.html">
+<link rel="stylesheet" href="style.css">
+<style>
+.contact-layout {
+  display: grid;
+  grid-template-columns: 1fr 1.15fr;
+  gap: 2rem;
+  align-items: start;
+}
+
+/* ── INFO SIDE ── */
+.contact-info-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+}
+.contact-info-header {
+  background: var(--navy);
+  padding: 1.5rem 1.75rem;
+  color: #fff;
+}
+.contact-info-header h2 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  margin-bottom: 0.3rem;
+}
+.contact-info-header p {
+  font-size: 0.85rem;
+  color: rgba(255,255,255,0.6);
+  line-height: 1.5;
+}
+.contact-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  padding: 1rem 1.75rem;
+  border-bottom: 1px solid var(--border);
+  transition: background var(--transition);
+}
+.contact-item:hover { background: var(--bg); }
+.contact-item:last-child { border-bottom: none; }
+.contact-item-icon {
+  width: 36px; height: 36px;
+  background: var(--tag-bg);
+  border: 1px solid #bfdbfe;
+  border-radius: var(--radius-sm);
+  display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0;
+  font-size: 0.9rem;
+}
+.contact-item-label {
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin-bottom: 0.2rem;
+}
+.contact-item-val {
+  font-size: 0.88rem;
+  color: var(--text);
+  font-weight: 500;
+}
+.contact-item-val a {
+  color: var(--text);
+  transition: color var(--transition);
+}
+.contact-item-val a:hover { color: var(--accent); }
+.avail-block {
+  margin: 1.25rem;
+  padding: 1rem 1.25rem;
+  background: #f0fdf4;
+  border: 1px solid #bbf7d0;
+  border-radius: var(--radius-sm);
+  border-left: 3px solid #059669;
+}
+.avail-status {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #059669;
+  margin-bottom: 0.3rem;
+}
+.avail-dot {
+  width: 7px; height: 7px;
+  border-radius: 50%;
+  background: #34d399;
+  box-shadow: 0 0 5px #34d399;
+  animation: blink 2s infinite;
+}
+@keyframes blink{0%,100%{opacity:1}50%{opacity:.35}}
+.avail-text {
+  font-size: 0.83rem;
+  color: #065f46;
+  line-height: 1.5;
+}
+
+/* ── RIGHT SIDE TABS ── */
+.right-tabs {
+  display: flex;
+  border-bottom: 1px solid var(--border);
+  margin-bottom: 0;
+  background: var(--card);
+  border-radius: var(--radius) var(--radius) 0 0;
+  overflow: hidden;
+  border: 1px solid var(--border);
+  border-bottom: none;
+}
+.right-tab {
+  flex: 1;
+  padding: 0.85rem 1rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  border-bottom: 2px solid transparent;
+  transition: all var(--transition);
+  text-align: center;
+}
+.right-tab:hover { color: var(--text); background: var(--bg); }
+.right-tab.active {
+  color: var(--accent);
+  border-bottom-color: var(--accent);
+  background: var(--card);
+}
+.tab-panel {
+  display: none;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-top: none;
+  border-radius: 0 0 var(--radius) var(--radius);
+  padding: 1.75rem;
+  box-shadow: var(--shadow-sm);
+}
+.tab-panel.active { display: block; }
+
+/* ── CONTACT FORM ── */
+.form-group { margin-bottom: 1.1rem; }
+.form-label {
+  display: block;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--text);
+  margin-bottom: 0.4rem;
+}
+.form-label span { color: #ef4444; margin-left: 2px; }
+.form-input {
+  width: 100%;
+  background: var(--bg);
+  border: 1.5px solid var(--border-strong);
+  border-radius: var(--radius-sm);
+  padding: 0.65rem 0.9rem;
+  font-size: 0.875rem;
+  font-family: var(--font);
+  color: var(--text);
+  outline: none;
+  transition: border-color var(--transition), box-shadow var(--transition);
+}
+.form-input:focus {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px rgba(37,99,235,0.1);
+  background: #fff;
+}
+.form-input::placeholder { color: var(--text-muted); }
+textarea.form-input { resize: vertical; min-height: 110px; }
+.form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 0.85rem; }
+.form-hint {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  margin-top: 0.3rem;
+}
+.form-status {
+  display: none;
+  padding: 0.75rem 1rem;
+  border-radius: var(--radius-sm);
+  font-size: 0.85rem;
+  margin-top: 0.85rem;
+  font-weight: 500;
+}
+.form-status.success {
+  background: #f0fdf4;
+  border: 1px solid #bbf7d0;
+  color: #059669;
+}
+.form-status.error {
+  background: #fef2f2;
+  border: 1px solid #fecaca;
+  color: #dc2626;
+}
+
+/* ── AI CHAT ── */
+.chat-header-info {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding-bottom: 1.1rem;
+  border-bottom: 1px solid var(--border);
+  margin-bottom: 1.1rem;
+}
+.chat-avatar {
+  width: 40px; height: 40px;
+  background: var(--navy);
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  color: #93c5fd;
+  font-size: 1.1rem;
+  flex-shrink: 0;
+}
+.chat-ai-name {
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--text);
+}
+.chat-ai-sub {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  margin-top: 0.1rem;
+}
+.chat-online {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  font-size: 0.7rem;
+  color: #059669;
+  font-weight: 600;
+  margin-left: auto;
+}
+.chat-online-dot {
+  width: 6px; height: 6px;
+  border-radius: 50%;
+  background: #34d399;
+  animation: blink 2s infinite;
+}
+.chat-messages {
+  height: 320px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+  padding: 0.25rem 0;
+  margin-bottom: 1rem;
+  scroll-behavior: smooth;
+}
+.chat-messages::-webkit-scrollbar { width: 4px; }
+.chat-messages::-webkit-scrollbar-track { background: var(--bg); }
+.chat-messages::-webkit-scrollbar-thumb { background: var(--border-strong); border-radius: 2px; }
+.chat-msg {
+  display: flex;
+  flex-direction: column;
+  max-width: 82%;
+  animation: msgFade .25s ease;
+}
+@keyframes msgFade { from{opacity:0;transform:translateY(5px)} to{opacity:1;transform:none} }
+.chat-msg.ai { align-self: flex-start; }
+.chat-msg.user { align-self: flex-end; }
+.chat-msg-sender {
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin-bottom: 0.25rem;
+}
+.chat-msg.user .chat-msg-sender { text-align: right; }
+.chat-bubble {
+  padding: 0.7rem 0.95rem;
+  border-radius: var(--radius-sm);
+  font-size: 0.875rem;
+  line-height: 1.65;
+}
+.chat-msg.ai .chat-bubble {
+  background: var(--bg);
+  border: 1px solid var(--border);
+  color: var(--text);
+  border-bottom-left-radius: 2px;
+}
+.chat-msg.user .chat-bubble {
+  background: var(--navy);
+  color: #fff;
+  border-bottom-right-radius: 2px;
+}
+.chat-typing .chat-bubble {
+  display: flex;
+  gap: 4px;
+  align-items: center;
+  padding: 0.75rem 1rem;
+}
+.typing-dot {
+  width: 6px; height: 6px;
+  border-radius: 50%;
+  background: var(--text-muted);
+  animation: typeBounce 1.1s infinite;
+}
+.typing-dot:nth-child(2){animation-delay:.18s}
+.typing-dot:nth-child(3){animation-delay:.36s}
+@keyframes typeBounce{0%,60%,100%{transform:translateY(0)}30%{transform:translateY(-6px)}}
+.chat-input-row {
+  display: flex;
+  gap: 0.5rem;
+  border-top: 1px solid var(--border);
+  padding-top: 1rem;
+}
+.chat-input {
+  flex: 1;
+  background: var(--bg);
+  border: 1.5px solid var(--border-strong);
+  border-radius: var(--radius-sm);
+  padding: 0.6rem 0.9rem;
+  font-size: 0.875rem;
+  font-family: var(--font);
+  color: var(--text);
+  outline: none;
+  transition: border-color var(--transition);
+}
+.chat-input:focus { border-color: var(--accent); }
+.chat-input::placeholder { color: var(--text-muted); }
+.chat-send-btn {
+  background: var(--accent);
+  color: #fff;
+  border: none;
+  border-radius: var(--radius-sm);
+  padding: 0.6rem 1.1rem;
+  font-size: 0.82rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background var(--transition);
+  white-space: nowrap;
+}
+.chat-send-btn:hover { background: var(--accent-hover); }
+.chat-send-btn:disabled { opacity: 0.5; cursor: not-allowed; }
+.chat-suggestions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-bottom: 0.85rem;
+}
+.chat-suggest-btn {
+  font-size: 0.75rem;
+  padding: 0.3rem 0.75rem;
+  border: 1px solid var(--border-strong);
+  border-radius: 20px;
+  background: transparent;
+  color: var(--text-secondary);
+  cursor: pointer;
+  transition: all var(--transition);
+  font-family: var(--font);
+}
+.chat-suggest-btn:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+  background: var(--tag-bg);
+}
+.api-key-notice {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  text-align: center;
+  margin-top: 0.6rem;
+  line-height: 1.5;
+}
+.api-key-notice a { color: var(--accent); }
+
+@media(max-width:860px){
+  .contact-layout { grid-template-columns: 1fr; }
+}
+@media(max-width:480px){
+  .form-row { grid-template-columns: 1fr; }
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <a href="index.html" class="nav-brand">Krishna Vamsi <span>Prathipati</span></a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="skills.html">Skills</a></li>
+      <li><a href="resume.html">Resume</a></li>
+      <li><a href="contact.html" class="active">Contact</a></li>
+    </ul>
+    <button class="nav-hamburger" onclick="toggleNav()" aria-label="Menu">&#9776;</button>
+  </div>
+</nav>
+<div class="nav-mobile" id="nav-mobile">
+  <a href="index.html">Home</a>
+  <a href="about.html">About</a>
+  <a href="projects.html">Projects</a>
+  <a href="skills.html">Skills</a>
+  <a href="resume.html">Resume</a>
+  <a href="contact.html" class="active">Contact</a>
+</div>
+<div class="otw-strip">
+  <span class="otw-dot"></span>
+  Open to Work &mdash; Graduating May 2026 &mdash; AI / ML / Computer Vision Roles &amp; Research Internships
+  <a href="contact.html">Get in Touch &rarr;</a>
+</div>
+
+
+<div class="page-header">
+  <div class="container">
+    <div class="page-header-tag">Get in Touch</div>
+    <h1>Contact</h1>
+    <p>Open to full-time roles, research internships, and collaborations in AI / ML.</p>
+  </div>
+</div>
+
+<div class="main">
+  <div class="container">
+    <div class="contact-layout">
+
+      <!-- LEFT: Info -->
+      <div>
+        <div class="contact-info-card reveal">
+          <div class="contact-info-header">
+            <h2>Krishna Vamsi Prathipati</h2>
+            <p>AI &amp; Data Science · Vijayawada, India · Graduating May 2026</p>
+          </div>
+          <div class="contact-item">
+            <div class="contact-item-icon">✉️</div>
+            <div>
+              <div class="contact-item-label">Email</div>
+              <div class="contact-item-val"><a href="mailto:krishnavamsi1017@gmail.com">krishnavamsi1017@gmail.com</a></div>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-item-icon">📞</div>
+            <div>
+              <div class="contact-item-label">Phone</div>
+              <div class="contact-item-val"><a href="tel:+919491710154">+91 94917 10154</a></div>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-item-icon">💼</div>
+            <div>
+              <div class="contact-item-label">LinkedIn</div>
+              <div class="contact-item-val">
+                <a href="https://linkedin.com/in/KrishnaVamsiPrathipati" target="_blank" rel="noopener">
+                  linkedin.com/in/KrishnaVamsiPrathipati ↗
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-item-icon">🐙</div>
+            <div>
+              <div class="contact-item-label">GitHub</div>
+              <div class="contact-item-val">
+                <a href="https://github.com/Krishnasunny1125" target="_blank" rel="noopener">
+                  github.com/Krishnasunny1125 ↗
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-item-icon">📄</div>
+            <div>
+              <div class="contact-item-label">Research</div>
+              <div class="contact-item-val">
+                <a href="https://doi.org/10.1109/INSPECT63485.2024.10896234" target="_blank" rel="noopener">
+                  IEEE INSPECT 2024 ↗
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="avail-block">
+            <div class="avail-status"><div class="avail-dot"></div>Available for Hire</div>
+            <div class="avail-text">Graduating May 2026. Actively seeking full-time AI/ML engineering roles and research internships.</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- RIGHT: Tabs -->
+      <div class="reveal">
+        <div class="right-tabs">
+          <button class="right-tab active" onclick="switchTab('form',this)">✉️ Send Message</button>
+          <button class="right-tab" onclick="switchTab('chat',this)">🤖 Ask AI</button>
+        </div>
+
+        <!-- FORM TAB -->
+        <div class="tab-panel active" id="tab-form">
+          <p style="font-size:.875rem;color:var(--text-secondary);margin-bottom:1.25rem;line-height:1.6;">
+            Fill in the form and your message will be sent directly to
+            <strong>krishnavamsi1017@gmail.com</strong>.
+          </p>
+          <div class="form-row">
+            <div class="form-group">
+              <label class="form-label" for="f-name">Name <span>*</span></label>
+              <input class="form-input" id="f-name" type="text" placeholder="Your full name" autocomplete="name">
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="f-email">Email <span>*</span></label>
+              <input class="form-input" id="f-email" type="email" placeholder="your@email.com" autocomplete="email">
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="f-subject">Subject <span>*</span></label>
+            <input class="form-input" id="f-subject" type="text" placeholder="e.g. Internship Inquiry / Collaboration / Research">
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="f-org">Organisation / Company</label>
+            <input class="form-input" id="f-org" type="text" placeholder="Where you're from (optional)">
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="f-msg">Message <span>*</span></label>
+            <textarea class="form-input" id="f-msg" placeholder="Tell me what you'd like to discuss..."></textarea>
+          </div>
+          <button class="btn btn-primary" onclick="sendForm()" id="form-btn" style="width:100%;justify-content:center;">
+            Send Message
+          </button>
+          <div class="form-status" id="form-status"></div>
+          <p class="form-hint" style="margin-top:.75rem;text-align:center;">
+            Prefer email directly?
+            <a href="mailto:krishnavamsi1017@gmail.com">krishnavamsi1017@gmail.com</a>
+          </p>
+        </div>
+
+        <!-- CHAT TAB -->
+        <div class="tab-panel" id="tab-chat">
+          <div class="chat-header-info">
+            <div class="chat-avatar">🤖</div>
+            <div>
+              <div class="chat-ai-name">Krishna's AI Assistant</div>
+              <div class="chat-ai-sub">Powered by OpenAI GPT-4o</div>
+            </div>
+            <div class="chat-online"><div class="chat-online-dot"></div>Online</div>
+          </div>
+          <div class="chat-suggestions" id="chat-suggestions">
+            <button class="chat-suggest-btn" onclick="suggest('Tell me about his IEEE research paper.')">IEEE Research</button>
+            <button class="chat-suggest-btn" onclick="suggest('What are his strongest skills?')">Top Skills</button>
+            <button class="chat-suggest-btn" onclick="suggest('Is he open to internships or full-time roles?')">Availability</button>
+            <button class="chat-suggest-btn" onclick="suggest('What projects has he built?')">Projects</button>
+            <button class="chat-suggest-btn" onclick="suggest('Why should I hire him?')">Why Hire?</button>
+          </div>
+          <div class="chat-messages" id="chat-messages">
+            <div class="chat-msg ai">
+              <div class="chat-msg-sender">AI Assistant</div>
+              <div class="chat-bubble">
+                Hi! I'm an AI assistant with full knowledge of Krishna Vamsi's background — his research, projects, skills, and availability. What would you like to know?
+              </div>
+            </div>
+          </div>
+          <div class="chat-input-row">
+            <input class="chat-input" id="chat-input" placeholder="Ask anything about Krishna Vamsi..."
+              onkeydown="if(event.key==='Enter'&&!event.shiftKey){event.preventDefault();sendChat()}">
+            <button class="chat-send-btn" id="chat-send" onclick="sendChat()">Send</button>
+          </div>
+          <p class="api-key-notice">
+            Requires an OpenAI API key. <a href="#" onclick="promptKey();return false;">Set your key</a> to enable the chat.
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<div id="toast"></div>
+
+<footer>
+  <p style="margin-bottom:.4rem;">
+    <strong style="color:#93c5fd;">Krishna Vamsi Prathipati</strong> &mdash;
+    AI &amp; Data Science Engineer &mdash; Vijayawada, Andhra Pradesh, India
+  </p>
+  <p style="margin-bottom:.75rem;">
+    Python &bull; PyTorch &bull; YOLOv8 &bull; Vision Transformers &bull; Deep Learning &bull; MLOps &bull; Flask &bull; GPT-4 &bull; Computer Vision
+  </p>
+  <p>
+    <a href="mailto:krishnavamsi1017@gmail.com">krishnavamsi1017@gmail.com</a> &nbsp;&bull;&nbsp;
+    <a href="tel:+919491710154">+91 94917 10154</a> &nbsp;&bull;&nbsp;
+    <a href="https://linkedin.com/in/KrishnaVamsiPrathipati" target="_blank" rel="noopener">LinkedIn</a> &nbsp;&bull;&nbsp;
+    <a href="https://github.com/Krishnasunny1125" target="_blank" rel="noopener">GitHub</a> &nbsp;&bull;&nbsp;
+    <a href="resume.html">Resume</a> &nbsp;&bull;&nbsp;
+    <a href="https://doi.org/10.1109/INSPECT63485.2024.10896234" target="_blank" rel="noopener">IEEE Paper</a>
+  </p>
+</footer>
+
+<script>
+/* ══════════════════════════════════════
+   CONFIG — paste your OpenAI key here
+   or let visitors enter it themselves
+══════════════════════════════════════ */
+let OPENAI_KEY = 'YOUR_OPENAI_API_KEY'; // replace or leave for visitor prompt
+
+const BIO = `You are a professional AI assistant representing Krishna Vamsi Prathipati's portfolio website. Answer questions concisely (2–5 sentences) and professionally. Be enthusiastic about his achievements but factual.
+
+PROFILE:
+- Name: Krishna Vamsi Prathipati
+- Education: B.Tech in Artificial Intelligence & Data Science, VR Siddhartha Engineering College, Vijayawada. CGPA: 8.85. Graduating May 2026.
+- Email: krishnavamsi1017@gmail.com | Phone: +91 9491710154
+- LinkedIn: linkedin.com/in/KrishnaVamsiPrathipati | GitHub: Krishnasunny1125
+
+IEEE RESEARCH PUBLICATION:
+- Title: "Detection of Aircraft from SAR Images Using Deep Neural Networks"
+- Method: Enhanced YOLOv8 + GLCM texture features + CLAHE preprocessing
+- Dataset: TerraSAR-X satellite imagery (844 images)
+- Results: 95.3% accuracy, 93% precision, 91% F1-score
+- Innovation: Replaced colour features with texture analysis for weather/urban noise robustness
+- DOI: 10.1109/INSPECT63485.2024.10896234 | Conference: IEEE INSPECT 2024
+
+PROJECTS:
+1. Face Recognition with Vision Transformers (ViT)
+   - Hybrid ViT + Haar Cascade ROI detection pipeline
+   - Dataset: 2,100 images | Result: 98.24% accuracy | Real-time face tracking
+
+2. Train Wagon Anomaly Detection
+   - YOLOv8 + OpenCV on live CCTV video streams
+   - Telegram API alerting | 96.6% accuracy | ~2 second inference
+
+3. Behavioral Change Monitoring Software
+   - Flask dashboard + GPT-4 API + NLTK
+   - Real-time multi-class sentiment analysis | Cost-optimized API preprocessing
+
+SKILLS: PyTorch, TensorFlow, YOLOv8, Vision Transformers, OpenCV, Python (Pandas/NumPy/sklearn), SQL, Java, Flask, REST APIs, GPT-4 API, NLTK, Prompt Engineering, Power BI, Tableau, Git/GitHub, RPA
+
+ACHIEVEMENTS:
+- Smart India Hackathon 2023 — National Finalist
+- Infosys AI/Deep Learning Certification
+- Oracle Database Certification
+- Make A Difference — Volunteer Educator (Grades 5 & 7 Mathematics)
+
+AVAILABILITY: Graduating May 2026. Actively seeking full-time AI/ML engineering roles and research internships globally.`;
+
+/* ── TABS ── */
+function switchTab(id, btn){
+  document.querySelectorAll('.right-tab').forEach(b=>b.classList.remove('active'));
+  document.querySelectorAll('.tab-panel').forEach(p=>p.classList.remove('active'));
+  btn.classList.add('active');
+  document.getElementById('tab-'+id).classList.add('active');
+}
+
+/* ── NAV ── */
+function toggleNav(){ document.getElementById('nav-mobile').classList.toggle('open'); }
+
+/* ── SCROLL REVEAL ── */
+const ro = new IntersectionObserver(entries=>{
+  entries.forEach((el,i)=>{
+    if(el.isIntersecting){
+      setTimeout(()=>el.target.classList.add('in'), i*80);
+      ro.unobserve(el.target);
+    }
+  });
+},{threshold:.1});
+document.querySelectorAll('.reveal').forEach(el=>ro.observe(el));
+
+/* ── TOAST ── */
+function showToast(msg, dur=3500){
+  const t=document.getElementById('toast');
+  t.textContent=msg;
+  t.classList.add('show');
+  setTimeout(()=>t.classList.remove('show'), dur);
+}
+
+/* ══════════════════════════════════════
+   CONTACT FORM — sends via mailto fallback
+   Swap with EmailJS / Formspree for real delivery
+══════════════════════════════════════ */
+function sendForm(){
+  const name    = document.getElementById('f-name').value.trim();
+  const email   = document.getElementById('f-email').value.trim();
+  const subject = document.getElementById('f-subject').value.trim();
+  const org     = document.getElementById('f-org').value.trim();
+  const msg     = document.getElementById('f-msg').value.trim();
+  const status  = document.getElementById('form-status');
+  const btn     = document.getElementById('form-btn');
+
+  // Basic validation
+  if(!name || !email || !subject || !msg){
+    status.className = 'form-status error';
+    status.style.display = 'block';
+    status.textContent = 'Please fill in all required fields.';
+    return;
+  }
+  if(!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)){
+    status.className = 'form-status error';
+    status.style.display = 'block';
+    status.textContent = 'Please enter a valid email address.';
+    return;
+  }
+
+  // Build mailto body
+  const body = [
+    `Name: ${name}`,
+    `Email: ${email}`,
+    org ? `Organisation: ${org}` : '',
+    '',
+    msg
+  ].filter(Boolean).join('\n');
+
+  // Open mailto (works on all devices without a backend)
+  const mailtoLink = `mailto:krishnavamsi1017@gmail.com`
+    + `?subject=${encodeURIComponent(subject)}`
+    + `&body=${encodeURIComponent(body)}`;
+
+  window.location.href = mailtoLink;
+
+  // Show success message
+  status.className = 'form-status success';
+  status.style.display = 'block';
+  status.textContent = '✓ Your email client has opened with the message pre-filled. Just hit send!';
+  btn.textContent = 'Message Ready to Send ✓';
+  btn.disabled = true;
+
+  setTimeout(()=>{
+    btn.textContent = 'Send Message';
+    btn.disabled = false;
+    status.style.display = 'none';
+  }, 6000);
+}
+
+/* ══════════════════════════════════════
+   AI CHAT — OpenAI GPT-4o
+══════════════════════════════════════ */
+let chatHistory = [];
+
+function promptKey(){
+  const k = prompt('Enter your OpenAI API key (sk-...):\n\nGet one at platform.openai.com\nYour key is stored only in this browser session.');
+  if(k && k.startsWith('sk-')){
+    OPENAI_KEY = k;
+    showToast('✓ API key set. Chat is now active.');
+  } else if(k){
+    showToast('That doesn\'t look like a valid key. Keys start with sk-');
+  }
+}
+
+function suggest(q){
+  document.getElementById('chat-input').value = q;
+  // Hide suggestions after first use
+  document.getElementById('chat-suggestions').style.display = 'none';
+  sendChat();
+}
+
+async function sendChat(){
+  const input = document.getElementById('chat-input');
+  const msg   = input.value.trim();
+  if(!msg) return;
+
+  if(OPENAI_KEY === 'YOUR_OPENAI_API_KEY' || !OPENAI_KEY){
+    const k = prompt('Enter your OpenAI API key to enable the chat (get one at platform.openai.com):');
+    if(k && k.startsWith('sk-')){ OPENAI_KEY = k; }
+    else { showToast('Please set a valid OpenAI API key first.'); return; }
+  }
+
+  input.value = '';
+  addMsg(msg, 'user');
+  chatHistory.push({ role:'user', content:msg });
+  const typing = addTyping();
+
+  const sendBtn = document.getElementById('chat-send');
+  sendBtn.disabled = true;
+
+  try {
+    const res = await fetch('https://api.openai.com/v1/chat/completions', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'Authorization': 'Bearer ' + OPENAI_KEY
+      },
+      body: JSON.stringify({
+        model: 'gpt-4o',
+        max_tokens: 600,
+        messages: [
+          { role: 'system', content: BIO },
+          ...chatHistory
+        ]
+      })
+    });
+
+    const data = await res.json();
+    typing.remove();
+
+    if(data.error){
+      const errMsg = data.error.code === 'invalid_api_key'
+        ? 'Invalid API key. Please check and try again.'
+        : 'API error: ' + data.error.message;
+      addMsg(errMsg, 'ai');
+      return;
+    }
+
+    const reply = data.choices?.[0]?.message?.content || 'Sorry, I could not generate a response.';
+    chatHistory.push({ role:'assistant', content: reply });
+    if(chatHistory.length > 20) chatHistory = chatHistory.slice(-20);
+    addMsg(reply, 'ai');
+
+  } catch(e) {
+    typing.remove();
+    addMsg('Connection error. Please check your internet connection and try again.', 'ai');
+  } finally {
+    sendBtn.disabled = false;
+    input.focus();
+  }
+}
+
+function addMsg(text, type){
+  const wrap = document.createElement('div');
+  wrap.className = 'chat-msg ' + type;
+  const sender = document.createElement('div');
+  sender.className = 'chat-msg-sender';
+  sender.textContent = type === 'ai' ? 'AI Assistant' : 'You';
+  const bubble = document.createElement('div');
+  bubble.className = 'chat-bubble';
+  bubble.textContent = text;
+  wrap.appendChild(sender);
+  wrap.appendChild(bubble);
+  const feed = document.getElementById('chat-messages');
+  feed.appendChild(wrap);
+  feed.scrollTop = feed.scrollHeight;
+  return wrap;
+}
+
+function addTyping(){
+  const wrap = document.createElement('div');
+  wrap.className = 'chat-msg ai chat-typing';
+  const sender = document.createElement('div');
+  sender.className = 'chat-msg-sender';
+  sender.textContent = 'AI Assistant';
+  const bubble = document.createElement('div');
+  bubble.className = 'chat-bubble';
+  bubble.innerHTML = '<div class="typing-dot"></div><div class="typing-dot"></div><div class="typing-dot"></div>';
+  wrap.appendChild(sender);
+  wrap.appendChild(bubble);
+  const feed = document.getElementById('chat-messages');
+  feed.appendChild(wrap);
+  feed.scrollTop = feed.scrollHeight;
+  return wrap;
+}
+</script>
+</body>
+</html>

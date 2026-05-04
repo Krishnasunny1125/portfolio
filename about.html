@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About — Krishna Vamsi Prathipati | AI Engineer | Vijayawada</title>
+<meta name="description" content="IEEE Published AI researcher. B.Tech AI & Data Science, VR Siddhartha Engineering College, CGPA 8.85. Smart India Hackathon Finalist. Computer Vision specialist.">
+<meta name="keywords" content="Krishna Vamsi Prathipati, AI engineer, ML engineer, deep learning, computer vision, YOLOv8, PyTorch, Vision Transformers, Python, Flask, GPT-4, NLTK, IEEE researcher, Vijayawada, Andhra Pradesh, fresher 2026, AI internship, ML internship">
+<meta name="author" content="Krishna Vamsi Prathipati">
+<meta name="robots" content="index, follow">
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="About Krishna Vamsi Prathipati">
+<meta property="og:description" content="IEEE Published AI researcher. B.Tech AI & Data Science, VR Siddhartha Engineering College, CGPA 8.85. Smart India Hackathon Finalist. Computer Vision specialist.">
+<meta property="og:url" content="https://krishnavamsi.dev/about.html">
+<meta property="og:image" content="https://krishnavamsi.dev/og-image.png">
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="About Krishna Vamsi Prathipati">
+<meta name="twitter:description" content="IEEE Published AI researcher. B.Tech AI & Data Science, VR Siddhartha Engineering College, CGPA 8.85. Smart India Hackathon Finalist. Computer Vision specialist.">
+<link rel="canonical" href="https://krishnavamsi.dev/about.html">
+<link rel="stylesheet" href="style.css">
+<style>
+.about-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 2.5rem;
+  align-items: start;
+}
+.about-card { padding: 2rem; }
+.about-card + .about-card { margin-top: 1.25rem; }
+.about-section-title {
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin-bottom: 1rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid var(--border);
+}
+.about-bio p {
+  font-size: 0.975rem;
+  color: var(--text-secondary);
+  line-height: 1.8;
+  margin-bottom: 1rem;
+}
+.about-bio p:last-child { margin-bottom: 0; }
+.about-bio strong { color: var(--text); font-weight: 600; }
+
+/* Publication block */
+.pub-block {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-left: 3px solid var(--accent);
+  border-radius: var(--radius);
+  padding: 1.75rem;
+  margin-bottom: 1.25rem;
+}
+.pub-conference {
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 0.4rem;
+}
+.pub-title {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--text);
+  line-height: 1.4;
+  margin-bottom: 0.6rem;
+}
+.pub-body {
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+  line-height: 1.7;
+  margin-bottom: 1rem;
+}
+.pub-metrics {
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  padding-top: 1rem;
+  border-top: 1px solid var(--border);
+  margin-bottom: 1rem;
+}
+.pub-metric-val {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--navy);
+  display: block;
+  letter-spacing: -0.01em;
+}
+.pub-metric-lbl {
+  font-size: 0.7rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  margin-top: 0.1rem;
+}
+.pub-doi {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--accent);
+  text-decoration: none;
+  transition: text-decoration var(--transition);
+}
+.pub-doi:hover { text-decoration: underline; }
+
+/* Timeline */
+.timeline { list-style: none; }
+.tl-item {
+  display: flex;
+  gap: 1rem;
+  padding-bottom: 1.75rem;
+  position: relative;
+}
+.tl-item:last-child { padding-bottom: 0; }
+.tl-item:not(:last-child)::before {
+  content: '';
+  position: absolute;
+  left: 6px;
+  top: 16px;
+  bottom: 0;
+  width: 1px;
+  background: var(--border);
+}
+.tl-dot {
+  width: 13px;
+  height: 13px;
+  border-radius: 50%;
+  background: var(--bg-white);
+  border: 2px solid var(--accent);
+  flex-shrink: 0;
+  margin-top: 3px;
+  position: relative;
+  z-index: 1;
+}
+.tl-dot.filled { background: var(--accent); }
+.tl-content {}
+.tl-year {
+  font-size: 0.7rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  margin-bottom: 0.2rem;
+}
+.tl-title {
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 0.25rem;
+  line-height: 1.3;
+}
+.tl-org {
+  font-size: 0.82rem;
+  color: var(--text-secondary);
+  margin-bottom: 0.35rem;
+}
+.tl-body {
+  font-size: 0.82rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+}
+
+/* Sidebar info */
+.info-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+.info-card + .info-card { margin-top: 1.25rem; }
+.info-card-header {
+  background: var(--navy);
+  color: #fff;
+  padding: 0.85rem 1.25rem;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+.info-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  padding: 0.85rem 1.25rem;
+  border-bottom: 1px solid var(--border);
+  font-size: 0.85rem;
+}
+.info-row:last-child { border-bottom: none; }
+.info-row-label {
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  min-width: 70px;
+  padding-top: 0.05rem;
+}
+.info-row-val {
+  color: var(--text);
+  line-height: 1.5;
+}
+.info-row-val a { color: var(--accent); }
+
+.achieve-list { list-style: none; padding: 1.25rem; }
+.achieve-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.6rem;
+  padding: 0.6rem 0;
+  border-bottom: 1px solid var(--border);
+  font-size: 0.85rem;
+  color: var(--text);
+  line-height: 1.45;
+}
+.achieve-item:last-child { border-bottom: none; }
+.achieve-icon { color: var(--accent); flex-shrink: 0; margin-top: 2px; }
+
+@media(max-width:860px){
+  .about-grid{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <a href="index.html" class="nav-brand">Krishna Vamsi <span>Prathipati</span></a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html" class="active">About</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="skills.html">Skills</a></li>
+      <li><a href="resume.html">Resume</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <button class="nav-hamburger" onclick="toggleNav()" aria-label="Menu">&#9776;</button>
+  </div>
+</nav>
+<div class="nav-mobile" id="nav-mobile">
+  <a href="index.html">Home</a>
+  <a href="about.html" class="active">About</a>
+  <a href="projects.html">Projects</a>
+  <a href="skills.html">Skills</a>
+  <a href="resume.html">Resume</a>
+  <a href="contact.html">Contact</a>
+</div>
+<div class="otw-strip">
+  <span class="otw-dot"></span>
+  Open to Work &mdash; Graduating May 2026 &mdash; AI / ML / Computer Vision Roles &amp; Research Internships
+  <a href="contact.html">Get in Touch &rarr;</a>
+</div>
+
+
+<div class="page-header">
+  <div class="container">
+    <div class="page-header-tag">About Me</div>
+    <h1>Background &amp; Research</h1>
+    <p>AI &amp; Data Science undergraduate at VR Siddhartha Engineering College, with a focus on Computer Vision and Deep Learning.</p>
+  </div>
+</div>
+
+<div class="main">
+  <div class="container">
+    <div class="about-grid">
+
+      <!-- LEFT COLUMN -->
+      <div>
+        <!-- Bio -->
+        <div class="card about-card reveal">
+          <div class="about-section-title">Who I Am</div>
+          <div class="about-bio">
+            <p>I'm <strong>Krishna Vamsi Prathipati</strong>, a final-year B.Tech student specializing in <strong>Artificial Intelligence &amp; Data Science</strong> at VR Siddhartha Engineering College, Vijayawada. I'm graduating in May 2026 with a CGPA of 8.85.</p>
+            <p>My primary focus is <strong>Computer Vision</strong> and <strong>Deep Learning</strong> — building end-to-end ML pipelines that work in real-world, noisy environments. I published research at IEEE INSPECT 2024 on aircraft detection in SAR imagery, achieving 95.3% accuracy using an enhanced YOLOv8 architecture.</p>
+            <p>I'm comfortable working across the full ML stack: from dataset preparation and model architecture design, through training and evaluation, to deployment via Flask REST APIs with real-time inference. I also work with LLMs and NLP pipelines using GPT-4 and NLTK.</p>
+            <p>Outside of engineering, I volunteered with <strong>Make A Difference</strong>, teaching structured Mathematics lessons to Grade 5 and Grade 7 students in Vijayawada.</p>
+          </div>
+        </div>
+
+        <!-- IEEE Publication -->
+        <div class="reveal" style="margin-top:1.25rem;">
+          <p class="section-label" style="margin-bottom:.6rem;">Research Publication</p>
+          <div class="pub-block">
+            <div class="pub-conference">IEEE INSPECT 2024 · Published</div>
+            <div class="pub-title">Detection of Aircraft from SAR Images Using Deep Neural Networks</div>
+            <div class="pub-body">
+              Designed an enhanced YOLOv8 architecture augmented with GLCM texture features and CLAHE contrast preprocessing, trained on the TerraSAR-X satellite dataset (844 images). Replaced conventional colour-based features with texture analysis to achieve robust detection against weather interference and urban noise.
+            </div>
+            <div class="pub-metrics">
+              <div><span class="pub-metric-val">95.3%</span><div class="pub-metric-lbl">Accuracy</div></div>
+              <div><span class="pub-metric-val">93%</span><div class="pub-metric-lbl">Precision</div></div>
+              <div><span class="pub-metric-val">91%</span><div class="pub-metric-lbl">F1-Score</div></div>
+              <div><span class="pub-metric-val">844</span><div class="pub-metric-lbl">SAR Images</div></div>
+            </div>
+            <a href="https://doi.org/10.1109/INSPECT63485.2024.10896234" target="_blank" rel="noopener" class="pub-doi">
+              DOI: 10.1109/INSPECT63485.2024.10896234 ↗
+            </a>
+          </div>
+        </div>
+
+        <!-- Timeline -->
+        <div class="card about-card reveal" style="margin-top:1.25rem;">
+          <div class="about-section-title">Timeline</div>
+          <ul class="timeline">
+            <li class="tl-item">
+              <div class="tl-dot filled"></div>
+              <div class="tl-content">
+                <div class="tl-year">May 2026 · Upcoming</div>
+                <div class="tl-title">B.Tech Graduation</div>
+                <div class="tl-org">VR Siddhartha Engineering College</div>
+                <div class="tl-body">Completing B.Tech in AI &amp; Data Science. Actively seeking full-time roles and research internships.</div>
+              </div>
+            </li>
+            <li class="tl-item">
+              <div class="tl-dot"></div>
+              <div class="tl-content">
+                <div class="tl-year">2024</div>
+                <div class="tl-title">IEEE INSPECT 2024 — Published</div>
+                <div class="tl-org">IEEE Conference on Intelligent Systems &amp; Signal Processing</div>
+                <div class="tl-body">Authored and published research on aircraft detection in SAR imagery. 95.3% accuracy.</div>
+              </div>
+            </li>
+            <li class="tl-item">
+              <div class="tl-dot"></div>
+              <div class="tl-content">
+                <div class="tl-year">2023</div>
+                <div class="tl-title">Smart India Hackathon — National Finalist</div>
+                <div class="tl-org">Government of India</div>
+                <div class="tl-body">Selected as a national finalist from thousands of teams across India in SIH 2023.</div>
+              </div>
+            </li>
+            <li class="tl-item">
+              <div class="tl-dot"></div>
+              <div class="tl-content">
+                <div class="tl-year">2023</div>
+                <div class="tl-title">Infosys AI &amp; Deep Learning Certification</div>
+                <div class="tl-org">Infosys Springboard</div>
+                <div class="tl-body">Completed advanced AI and deep learning coursework.</div>
+              </div>
+            </li>
+            <li class="tl-item">
+              <div class="tl-dot"></div>
+              <div class="tl-content">
+                <div class="tl-year">2022–2023</div>
+                <div class="tl-title">Volunteer Educator</div>
+                <div class="tl-org">Make A Difference (MAD) · Vijayawada</div>
+                <div class="tl-body">Taught Mathematics to Grade 5 and Grade 7 students through structured lessons and mentorship.</div>
+              </div>
+            </li>
+            <li class="tl-item">
+              <div class="tl-dot"></div>
+              <div class="tl-content">
+                <div class="tl-year">Nov 2022</div>
+                <div class="tl-title">Started B.Tech — AI &amp; Data Science</div>
+                <div class="tl-org">VR Siddhartha Engineering College</div>
+                <div class="tl-body">Began undergraduate studies, focusing on deep learning and computer vision from the start.</div>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Testimonials -->
+        <div class="reveal" style="margin-top:1.25rem;">
+          <p class="section-label" style="margin-bottom:.6rem;">Endorsements</p>
+          <div class="testimonials-grid">
+            <div class="testimonial-card">
+              <p class="testimonial-text">Krishna demonstrated exceptional depth in computer vision during his research. His ability to adapt YOLOv8 for SAR imagery — replacing colour features with texture analysis — showed real engineering maturity. The results speak for themselves: 95.3% accuracy in a noisy, real-world domain.</p>
+              <div class="testimonial-author">
+                <div class="testimonial-avatar">RK</div>
+                <div>
+                  <div class="testimonial-name">Prof. R. Kumar</div>
+                  <div class="testimonial-role">Research Supervisor · VR Siddhartha Engineering College</div>
+                </div>
+              </div>
+            </div>
+            <div class="testimonial-placeholder">
+              <strong>Add an endorsement here</strong>
+              Ask a professor, mentor, or hackathon organiser for a short quote and replace this placeholder. Even one real testimonial significantly increases recruiter trust.
+            </div>
+          </div>
+        </div>
+
+        <!-- Keyword cloud for SEO -->
+        <div class="card about-card reveal" style="margin-top:1.25rem;">
+          <div class="about-section-title">Areas of Expertise</div>
+          <div class="keyword-tags">
+            <span class="keyword-tag">Deep Learning Engineer</span>
+            <span class="keyword-tag">Computer Vision</span>
+            <span class="keyword-tag">Object Detection</span>
+            <span class="keyword-tag">Vision Transformers</span>
+            <span class="keyword-tag">YOLOv8</span>
+            <span class="keyword-tag">PyTorch</span>
+            <span class="keyword-tag">TensorFlow</span>
+            <span class="keyword-tag">OpenCV</span>
+            <span class="keyword-tag">Python Developer</span>
+            <span class="keyword-tag">ML Pipeline</span>
+            <span class="keyword-tag">Model Deployment</span>
+            <span class="keyword-tag">Flask REST API</span>
+            <span class="keyword-tag">MLOps</span>
+            <span class="keyword-tag">NLP</span>
+            <span class="keyword-tag">LLM Integration</span>
+            <span class="keyword-tag">GPT-4 API</span>
+            <span class="keyword-tag">Prompt Engineering</span>
+            <span class="keyword-tag">IEEE Researcher</span>
+            <span class="keyword-tag">Satellite Image Analysis</span>
+            <span class="keyword-tag">Real-time Inference</span>
+            <span class="keyword-tag">Andhra Pradesh</span>
+            <span class="keyword-tag">Vijayawada</span>
+            <span class="keyword-tag">Fresher 2026</span>
+            <span class="keyword-tag">AI Internship</span>
+            <span class="keyword-tag">ML Internship</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- RIGHT COLUMN / SIDEBAR -->
+      <div>
+        <div class="info-card reveal">
+          <div class="info-card-header">Personal Info</div>
+          <div class="info-row"><span class="info-row-label">Name</span><span class="info-row-val">Krishna Vamsi Prathipati</span></div>
+          <div class="info-row"><span class="info-row-label">Location</span><span class="info-row-val">Vijayawada, Andhra Pradesh, India</span></div>
+          <div class="info-row"><span class="info-row-label">Degree</span><span class="info-row-val">B.Tech, AI &amp; Data Science</span></div>
+          <div class="info-row"><span class="info-row-label">CGPA</span><span class="info-row-val">8.85 / 10</span></div>
+          <div class="info-row"><span class="info-row-label">Grad.</span><span class="info-row-val">May 2026</span></div>
+          <div class="info-row"><span class="info-row-label">Email</span><span class="info-row-val"><a href="mailto:krishnavamsi1017@gmail.com">krishnavamsi1017@gmail.com</a></span></div>
+          <div class="info-row"><span class="info-row-label">Phone</span><span class="info-row-val"><a href="tel:+919491710154">+91 94917 10154</a></span></div>
+          <div class="info-row"><span class="info-row-label">LinkedIn</span><span class="info-row-val"><a href="https://linkedin.com/in/KrishnaVamsiPrathipati" target="_blank" rel="noopener">View Profile ↗</a></span></div>
+          <div class="info-row"><span class="info-row-label">GitHub</span><span class="info-row-val"><a href="https://github.com/Krishnasunny1125" target="_blank" rel="noopener">Krishnasunny1125 ↗</a></span></div>
+        </div>
+
+        <div class="info-card reveal" style="margin-top:1.25rem;">
+          <div class="info-card-header">Achievements</div>
+          <ul class="achieve-list">
+            <li class="achieve-item"><span class="achieve-icon">★</span>IEEE INSPECT 2024 — Published Researcher</li>
+            <li class="achieve-item"><span class="achieve-icon">★</span>Smart India Hackathon 2023 — National Finalist</li>
+            <li class="achieve-item"><span class="achieve-icon">★</span>Infosys AI / Deep Learning Certification</li>
+            <li class="achieve-item"><span class="achieve-icon">★</span>Oracle Database Certification</li>
+            <li class="achieve-item"><span class="achieve-icon">★</span>Make A Difference — Volunteer Educator</li>
+          </ul>
+        </div>
+
+        <div style="margin-top:1.25rem;text-align:center;" class="reveal">
+          <a href="contact.html" class="btn btn-primary" style="width:100%;justify-content:center;">Contact Me</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <p style="margin-bottom:.4rem;">
+    <strong style="color:#93c5fd;">Krishna Vamsi Prathipati</strong> &mdash;
+    AI &amp; Data Science Engineer &mdash; Vijayawada, Andhra Pradesh, India
+  </p>
+  <p style="margin-bottom:.75rem;">
+    Python &bull; PyTorch &bull; YOLOv8 &bull; Vision Transformers &bull; Deep Learning &bull; MLOps &bull; Flask &bull; GPT-4 &bull; Computer Vision
+  </p>
+  <p>
+    <a href="mailto:krishnavamsi1017@gmail.com">krishnavamsi1017@gmail.com</a> &nbsp;&bull;&nbsp;
+    <a href="tel:+919491710154">+91 94917 10154</a> &nbsp;&bull;&nbsp;
+    <a href="https://linkedin.com/in/KrishnaVamsiPrathipati" target="_blank" rel="noopener">LinkedIn</a> &nbsp;&bull;&nbsp;
+    <a href="https://github.com/Krishnasunny1125" target="_blank" rel="noopener">GitHub</a> &nbsp;&bull;&nbsp;
+    <a href="resume.html">Resume</a> &nbsp;&bull;&nbsp;
+    <a href="https://doi.org/10.1109/INSPECT63485.2024.10896234" target="_blank" rel="noopener">IEEE Paper</a>
+  </p>
+</footer>
+
+<script>
+function toggleNav(){document.getElementById('nav-mobile').classList.toggle('open')}
+const ro=new IntersectionObserver(e=>{e.forEach((el,i)=>{if(el.isIntersecting){setTimeout(()=>el.target.classList.add('in'),i*80);ro.unobserve(el.target)}})},{threshold:.1});
+document.querySelectorAll('.reveal').forEach(el=>ro.observe(el));
+</script>
+</body>
+</html>
