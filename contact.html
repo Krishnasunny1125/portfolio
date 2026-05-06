@@ -8,13 +8,11 @@
 <meta name="keywords" content="Krishna Vamsi Prathipati, AI engineer, ML engineer, deep learning, computer vision, YOLOv8, PyTorch, Vision Transformers, Python, Flask, GPT-4, NLTK, IEEE researcher, Vijayawada, Andhra Pradesh, fresher 2026, AI internship, ML internship">
 <meta name="author" content="Krishna Vamsi Prathipati">
 <meta name="robots" content="index, follow">
-<!-- Open Graph -->
 <meta property="og:type" content="website">
 <meta property="og:title" content="Contact Krishna Vamsi Prathipati">
 <meta property="og:description" content="Contact Krishna Vamsi Prathipati. Available for AI/ML engineering roles and research internships. Graduating May 2026. Vijayawada, Andhra Pradesh.">
 <meta property="og:url" content="https://krishnavamsi.dev/contact.html">
 <meta property="og:image" content="https://krishnavamsi.dev/og-image.png">
-<!-- Twitter Card -->
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Contact Krishna Vamsi Prathipati">
 <meta name="twitter:description" content="Contact Krishna Vamsi Prathipati. Available for AI/ML engineering roles and research internships. Graduating May 2026. Vijayawada, Andhra Pradesh.">
@@ -184,6 +182,7 @@
   color: var(--text);
   outline: none;
   transition: border-color var(--transition), box-shadow var(--transition);
+  box-sizing: border-box;
 }
 .form-input:focus {
   border-color: var(--accent);
@@ -222,18 +221,19 @@ textarea.form-input { resize: vertical; min-height: 110px; }
   display: flex;
   align-items: center;
   gap: 0.75rem;
-  padding-bottom: 1.1rem;
+  padding-bottom: 1rem;
   border-bottom: 1px solid var(--border);
-  margin-bottom: 1.1rem;
+  margin-bottom: 1rem;
 }
 .chat-avatar {
-  width: 40px; height: 40px;
-  background: var(--navy);
+  width: 42px; height: 42px;
+  background: linear-gradient(135deg, var(--navy) 0%, #1e40af 100%);
   border-radius: 50%;
   display: flex; align-items: center; justify-content: center;
   color: #93c5fd;
   font-size: 1.1rem;
   flex-shrink: 0;
+  box-shadow: 0 2px 8px rgba(37,99,235,0.25);
 }
 .chat-ai-name {
   font-size: 0.9rem;
@@ -241,9 +241,15 @@ textarea.form-input { resize: vertical; min-height: 110px; }
   color: var(--text);
 }
 .chat-ai-sub {
-  font-size: 0.75rem;
+  font-size: 0.72rem;
   color: var(--text-muted);
   margin-top: 0.1rem;
+}
+.chat-status-row {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-left: auto;
 }
 .chat-online {
   display: inline-flex;
@@ -252,7 +258,6 @@ textarea.form-input { resize: vertical; min-height: 110px; }
   font-size: 0.7rem;
   color: #059669;
   font-weight: 600;
-  margin-left: auto;
 }
 .chat-online-dot {
   width: 6px; height: 6px;
@@ -260,59 +265,132 @@ textarea.form-input { resize: vertical; min-height: 110px; }
   background: #34d399;
   animation: blink 2s infinite;
 }
+.chat-key-btn {
+  font-size: 0.68rem;
+  font-weight: 600;
+  padding: 0.25rem 0.6rem;
+  border: 1px solid var(--border-strong);
+  border-radius: 20px;
+  background: transparent;
+  color: var(--text-muted);
+  cursor: pointer;
+  font-family: var(--font);
+  transition: all var(--transition);
+  white-space: nowrap;
+}
+.chat-key-btn:hover { border-color: var(--accent); color: var(--accent); }
+.chat-key-btn.key-set { border-color: #bbf7d0; color: #059669; background: #f0fdf4; }
+
+/* Category chips */
+.chat-categories {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-bottom: 0.75rem;
+}
+.chat-cat-btn {
+  font-size: 0.73rem;
+  font-weight: 600;
+  padding: 0.28rem 0.7rem;
+  border: 1.5px solid var(--border-strong);
+  border-radius: 20px;
+  background: transparent;
+  color: var(--text-secondary);
+  cursor: pointer;
+  transition: all var(--transition);
+  font-family: var(--font);
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+}
+.chat-cat-btn:hover, .chat-cat-btn.active {
+  border-color: var(--accent);
+  color: var(--accent);
+  background: var(--tag-bg);
+}
+
+/* Suggestion chips (contextual, shown per category) */
+.chat-suggestions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+  margin-bottom: 0.85rem;
+  min-height: 28px;
+}
+.chat-suggest-btn {
+  font-size: 0.73rem;
+  padding: 0.28rem 0.7rem;
+  border: 1px solid var(--border-strong);
+  border-radius: 20px;
+  background: var(--bg);
+  color: var(--text-secondary);
+  cursor: pointer;
+  transition: all var(--transition);
+  font-family: var(--font);
+  animation: chipIn .2s ease;
+}
+@keyframes chipIn { from{opacity:0;transform:scale(.9)} to{opacity:1;transform:scale(1)} }
+.chat-suggest-btn:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+  background: var(--tag-bg);
+}
+
+/* Messages */
 .chat-messages {
-  height: 320px;
+  height: 300px;
   overflow-y: auto;
   display: flex;
   flex-direction: column;
   gap: 0.85rem;
-  padding: 0.25rem 0;
-  margin-bottom: 1rem;
+  padding: 0.25rem 0 0.5rem;
+  margin-bottom: 0.85rem;
   scroll-behavior: smooth;
 }
-.chat-messages::-webkit-scrollbar { width: 4px; }
-.chat-messages::-webkit-scrollbar-track { background: var(--bg); }
+.chat-messages::-webkit-scrollbar { width: 3px; }
+.chat-messages::-webkit-scrollbar-track { background: transparent; }
 .chat-messages::-webkit-scrollbar-thumb { background: var(--border-strong); border-radius: 2px; }
 .chat-msg {
   display: flex;
   flex-direction: column;
-  max-width: 82%;
+  max-width: 84%;
   animation: msgFade .25s ease;
 }
-@keyframes msgFade { from{opacity:0;transform:translateY(5px)} to{opacity:1;transform:none} }
+@keyframes msgFade { from{opacity:0;transform:translateY(6px)} to{opacity:1;transform:none} }
 .chat-msg.ai { align-self: flex-start; }
 .chat-msg.user { align-self: flex-end; }
 .chat-msg-sender {
-  font-size: 0.68rem;
+  font-size: 0.65rem;
   font-weight: 700;
-  letter-spacing: 0.04em;
+  letter-spacing: 0.05em;
   text-transform: uppercase;
   color: var(--text-muted);
-  margin-bottom: 0.25rem;
+  margin-bottom: 0.22rem;
 }
 .chat-msg.user .chat-msg-sender { text-align: right; }
 .chat-bubble {
   padding: 0.7rem 0.95rem;
-  border-radius: var(--radius-sm);
+  border-radius: 12px;
   font-size: 0.875rem;
-  line-height: 1.65;
+  line-height: 1.7;
 }
 .chat-msg.ai .chat-bubble {
   background: var(--bg);
   border: 1px solid var(--border);
   color: var(--text);
-  border-bottom-left-radius: 2px;
+  border-bottom-left-radius: 3px;
 }
 .chat-msg.user .chat-bubble {
   background: var(--navy);
   color: #fff;
-  border-bottom-right-radius: 2px;
+  border-bottom-right-radius: 3px;
 }
+.chat-bubble a { color: #93c5fd; text-decoration: underline; }
 .chat-typing .chat-bubble {
   display: flex;
   gap: 4px;
   align-items: center;
-  padding: 0.75rem 1rem;
+  padding: 0.7rem 1rem;
 }
 .typing-dot {
   width: 6px; height: 6px;
@@ -323,11 +401,13 @@ textarea.form-input { resize: vertical; min-height: 110px; }
 .typing-dot:nth-child(2){animation-delay:.18s}
 .typing-dot:nth-child(3){animation-delay:.36s}
 @keyframes typeBounce{0%,60%,100%{transform:translateY(0)}30%{transform:translateY(-6px)}}
+
+/* Input row */
 .chat-input-row {
   display: flex;
   gap: 0.5rem;
   border-top: 1px solid var(--border);
-  padding-top: 1rem;
+  padding-top: 0.85rem;
 }
 .chat-input {
   flex: 1;
@@ -354,39 +434,23 @@ textarea.form-input { resize: vertical; min-height: 110px; }
   cursor: pointer;
   transition: background var(--transition);
   white-space: nowrap;
+  display: flex; align-items: center; gap: 0.35rem;
 }
 .chat-send-btn:hover { background: var(--accent-hover); }
 .chat-send-btn:disabled { opacity: 0.5; cursor: not-allowed; }
-.chat-suggestions {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.4rem;
-  margin-bottom: 0.85rem;
-}
-.chat-suggest-btn {
-  font-size: 0.75rem;
-  padding: 0.3rem 0.75rem;
-  border: 1px solid var(--border-strong);
-  border-radius: 20px;
-  background: transparent;
-  color: var(--text-secondary);
-  cursor: pointer;
-  transition: all var(--transition);
-  font-family: var(--font);
-}
-.chat-suggest-btn:hover {
-  border-color: var(--accent);
-  color: var(--accent);
-  background: var(--tag-bg);
-}
-.api-key-notice {
-  font-size: 0.75rem;
+
+/* Google Forms note */
+.gform-note {
+  font-size: 0.72rem;
   color: var(--text-muted);
   text-align: center;
-  margin-top: 0.6rem;
-  line-height: 1.5;
+  margin-top: 0.75rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.3rem;
 }
-.api-key-notice a { color: var(--accent); }
+.gform-note svg { opacity: 0.5; }
 
 @media(max-width:860px){
   .contact-layout { grid-template-columns: 1fr; }
@@ -406,7 +470,6 @@ textarea.form-input { resize: vertical; min-height: 110px; }
       <li><a href="about.html">About</a></li>
       <li><a href="projects.html">Projects</a></li>
       <li><a href="skills.html">Skills</a></li>
-      <li><a href="resume.html">Resume</a></li>
       <li><a href="contact.html" class="active">Contact</a></li>
     </ul>
     <button class="nav-hamburger" onclick="toggleNav()" aria-label="Menu">&#9776;</button>
@@ -417,7 +480,6 @@ textarea.form-input { resize: vertical; min-height: 110px; }
   <a href="about.html">About</a>
   <a href="projects.html">Projects</a>
   <a href="skills.html">Skills</a>
-  <a href="resume.html">Resume</a>
   <a href="contact.html" class="active">Contact</a>
 </div>
 <div class="otw-strip">
@@ -510,8 +572,8 @@ textarea.form-input { resize: vertical; min-height: 110px; }
         <!-- FORM TAB -->
         <div class="tab-panel active" id="tab-form">
           <p style="font-size:.875rem;color:var(--text-secondary);margin-bottom:1.25rem;line-height:1.6;">
-            Fill in the form and your message will be sent directly to
-            <strong>krishnavamsi1017@gmail.com</strong>.
+            Fill in the form below — your message will be securely recorded and
+            <strong>Krishna will respond within 24 hours</strong>.
           </p>
           <div class="form-row">
             <div class="form-group">
@@ -539,7 +601,11 @@ textarea.form-input { resize: vertical; min-height: 110px; }
             Send Message
           </button>
           <div class="form-status" id="form-status"></div>
-          <p class="form-hint" style="margin-top:.75rem;text-align:center;">
+          <p class="gform-note">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            Responses are securely stored &amp; kept private
+          </p>
+          <p class="form-hint" style="margin-top:.5rem;text-align:center;">
             Prefer email directly?
             <a href="mailto:krishnavamsi1017@gmail.com">krishnavamsi1017@gmail.com</a>
           </p>
@@ -547,37 +613,56 @@ textarea.form-input { resize: vertical; min-height: 110px; }
 
         <!-- CHAT TAB -->
         <div class="tab-panel" id="tab-chat">
+          <!-- Header -->
           <div class="chat-header-info">
             <div class="chat-avatar">🤖</div>
             <div>
               <div class="chat-ai-name">Krishna's AI Assistant</div>
-              <div class="chat-ai-sub">Powered by OpenAI GPT-4o</div>
+              <div class="chat-ai-sub">Powered by Gemini · Knows his full resume</div>
             </div>
-            <div class="chat-online"><div class="chat-online-dot"></div>Online</div>
+            <div class="chat-status-row">
+              <div class="chat-online" id="chat-online-indicator">
+                <div class="chat-online-dot"></div>Online
+              </div>
+            </div>
           </div>
-          <div class="chat-suggestions" id="chat-suggestions">
-            <button class="chat-suggest-btn" onclick="suggest('Tell me about his IEEE research paper.')">IEEE Research</button>
-            <button class="chat-suggest-btn" onclick="suggest('What are his strongest skills?')">Top Skills</button>
-            <button class="chat-suggest-btn" onclick="suggest('Is he open to internships or full-time roles?')">Availability</button>
-            <button class="chat-suggest-btn" onclick="suggest('What projects has he built?')">Projects</button>
-            <button class="chat-suggest-btn" onclick="suggest('Why should I hire him?')">Why Hire?</button>
+
+          <!-- Category chips -->
+          <div class="chat-categories" id="chat-categories">
+            <button class="chat-cat-btn active" onclick="setCategory('all',this)">✨ All</button>
+            <button class="chat-cat-btn" onclick="setCategory('research',this)">📄 Research</button>
+            <button class="chat-cat-btn" onclick="setCategory('projects',this)">🛠 Projects</button>
+            <button class="chat-cat-btn" onclick="setCategory('skills',this)">⚡ Skills</button>
+            <button class="chat-cat-btn" onclick="setCategory('hiring',this)">💼 Hiring</button>
           </div>
+
+          <!-- Contextual suggestion chips -->
+          <div class="chat-suggestions" id="chat-suggestions"></div>
+
+          <!-- Messages -->
           <div class="chat-messages" id="chat-messages">
             <div class="chat-msg ai">
               <div class="chat-msg-sender">AI Assistant</div>
               <div class="chat-bubble">
-                Hi! I'm an AI assistant with full knowledge of Krishna Vamsi's background — his research, projects, skills, and availability. What would you like to know?
+                Hi! I know everything about Krishna Vamsi's resume — his IEEE research, projects, skills, and availability. Pick a category above or ask me anything directly!
               </div>
             </div>
           </div>
+
+          <!-- Input -->
+          <!-- FIX #19: character counter below input -->
           <div class="chat-input-row">
-            <input class="chat-input" id="chat-input" placeholder="Ask anything about Krishna Vamsi..."
+            <input class="chat-input" id="chat-input" placeholder="Ask anything about Krishna Vamsi…"
+              oninput="updateCounter()"
               onkeydown="if(event.key==='Enter'&&!event.shiftKey){event.preventDefault();sendChat()}">
-            <button class="chat-send-btn" id="chat-send" onclick="sendChat()">Send</button>
+            <button class="chat-send-btn" id="chat-send" onclick="sendChat()">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+              Send
+            </button>
           </div>
-          <p class="api-key-notice">
-            Requires an OpenAI API key. <a href="#" onclick="promptKey();return false;">Set your key</a> to enable the chat.
-          </p>
+          <div style="text-align:right;margin-top:.3rem;">
+            <span id="char-counter" style="font-size:.68rem;color:var(--text-muted);font-family:var(--font);">0 / 500</span>
+          </div>
         </div>
       </div>
 
@@ -586,6 +671,9 @@ textarea.form-input { resize: vertical; min-height: 110px; }
 </div>
 
 <div id="toast"></div>
+
+<!-- Hidden Google Form iframe (invisible submission) -->
+<iframe name="hidden_iframe" id="hidden_iframe" style="display:none;"></iframe>
 
 <footer>
   <p style="margin-bottom:.4rem;">
@@ -600,56 +688,23 @@ textarea.form-input { resize: vertical; min-height: 110px; }
     <a href="tel:+919491710154">+91 94917 10154</a> &nbsp;&bull;&nbsp;
     <a href="https://linkedin.com/in/KrishnaVamsiPrathipati" target="_blank" rel="noopener">LinkedIn</a> &nbsp;&bull;&nbsp;
     <a href="https://github.com/Krishnasunny1125" target="_blank" rel="noopener">GitHub</a> &nbsp;&bull;&nbsp;
-    <a href="resume.html">Resume</a> &nbsp;&bull;&nbsp;
     <a href="https://doi.org/10.1109/INSPECT63485.2024.10896234" target="_blank" rel="noopener">IEEE Paper</a>
   </p>
 </footer>
 
 <script>
-/* ══════════════════════════════════════
-   CONFIG — paste your OpenAI key here
-   or let visitors enter it themselves
-══════════════════════════════════════ */
-let OPENAI_KEY = 'YOUR_OPENAI_API_KEY'; // replace or leave for visitor prompt
+/* ── GOOGLE FORM CONFIG ── */
+const FORM_ACTION  = 'https://docs.google.com/forms/d/e/1FAIpQLSfer9jLWHlLGDkMPEvbXO6FbOp6bVTTeWaB0krYyLya1G3CZw/formResponse';
 
-const BIO = `You are a professional AI assistant representing Krishna Vamsi Prathipati's portfolio website. Answer questions concisely (2–5 sentences) and professionally. Be enthusiastic about his achievements but factual.
+const ENTRY = {
+  name:    'entry.1860165125',
+  email:   'entry.1299788464',
+  subject: 'entry.338354637',
+  org:     'entry.1452714397',
+  message: 'entry.1615060872',
+};
+/* ── END CONFIG ── */
 
-PROFILE:
-- Name: Krishna Vamsi Prathipati
-- Education: B.Tech in Artificial Intelligence & Data Science, VR Siddhartha Engineering College, Vijayawada. CGPA: 8.85. Graduating May 2026.
-- Email: krishnavamsi1017@gmail.com | Phone: +91 9491710154
-- LinkedIn: linkedin.com/in/KrishnaVamsiPrathipati | GitHub: Krishnasunny1125
-
-IEEE RESEARCH PUBLICATION:
-- Title: "Detection of Aircraft from SAR Images Using Deep Neural Networks"
-- Method: Enhanced YOLOv8 + GLCM texture features + CLAHE preprocessing
-- Dataset: TerraSAR-X satellite imagery (844 images)
-- Results: 95.3% accuracy, 93% precision, 91% F1-score
-- Innovation: Replaced colour features with texture analysis for weather/urban noise robustness
-- DOI: 10.1109/INSPECT63485.2024.10896234 | Conference: IEEE INSPECT 2024
-
-PROJECTS:
-1. Face Recognition with Vision Transformers (ViT)
-   - Hybrid ViT + Haar Cascade ROI detection pipeline
-   - Dataset: 2,100 images | Result: 98.24% accuracy | Real-time face tracking
-
-2. Train Wagon Anomaly Detection
-   - YOLOv8 + OpenCV on live CCTV video streams
-   - Telegram API alerting | 96.6% accuracy | ~2 second inference
-
-3. Behavioral Change Monitoring Software
-   - Flask dashboard + GPT-4 API + NLTK
-   - Real-time multi-class sentiment analysis | Cost-optimized API preprocessing
-
-SKILLS: PyTorch, TensorFlow, YOLOv8, Vision Transformers, OpenCV, Python (Pandas/NumPy/sklearn), SQL, Java, Flask, REST APIs, GPT-4 API, NLTK, Prompt Engineering, Power BI, Tableau, Git/GitHub, RPA
-
-ACHIEVEMENTS:
-- Smart India Hackathon 2023 — National Finalist
-- Infosys AI/Deep Learning Certification
-- Oracle Database Certification
-- Make A Difference — Volunteer Educator (Grades 5 & 7 Mathematics)
-
-AVAILABILITY: Graduating May 2026. Actively seeking full-time AI/ML engineering roles and research internships globally.`;
 
 /* ── TABS ── */
 function switchTab(id, btn){
@@ -681,11 +736,11 @@ function showToast(msg, dur=3500){
   setTimeout(()=>t.classList.remove('show'), dur);
 }
 
-/* ══════════════════════════════════════
-   CONTACT FORM — sends via mailto fallback
-   Swap with EmailJS / Formspree for real delivery
-══════════════════════════════════════ */
-function sendForm(){
+/* ══════════════════════════════════════════════════════
+   CONTACT FORM → Google Forms submission
+   Uses a hidden iframe so the page never redirects.
+══════════════════════════════════════════════════════ */
+async function sendForm(){
   const name    = document.getElementById('f-name').value.trim();
   const email   = document.getElementById('f-email').value.trim();
   const subject = document.getElementById('f-subject').value.trim();
@@ -694,165 +749,339 @@ function sendForm(){
   const status  = document.getElementById('form-status');
   const btn     = document.getElementById('form-btn');
 
-  // Basic validation
+  // Validation
+  status.style.display = 'none';
   if(!name || !email || !subject || !msg){
     status.className = 'form-status error';
     status.style.display = 'block';
-    status.textContent = 'Please fill in all required fields.';
+    status.textContent = '✗ Please fill in all required fields (Name, Email, Subject, Message).';
     return;
   }
   if(!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)){
     status.className = 'form-status error';
     status.style.display = 'block';
-    status.textContent = 'Please enter a valid email address.';
+    status.textContent = '✗ Please enter a valid email address.';
     return;
   }
 
-  // Build mailto body
-  const body = [
-    `Name: ${name}`,
-    `Email: ${email}`,
-    org ? `Organisation: ${org}` : '',
-    '',
-    msg
-  ].filter(Boolean).join('\n');
+  // Build form data
+  const formData = new FormData();
+  formData.append(ENTRY.name,    name);
+  formData.append(ENTRY.email,   email);
+  formData.append(ENTRY.subject, subject);
+  formData.append(ENTRY.org,     org || 'Not specified');
+  formData.append(ENTRY.message, msg);
 
-  // Open mailto (works on all devices without a backend)
-  const mailtoLink = `mailto:krishnavamsi1017@gmail.com`
-    + `?subject=${encodeURIComponent(subject)}`
-    + `&body=${encodeURIComponent(body)}`;
-
-  window.location.href = mailtoLink;
-
-  // Show success message
-  status.className = 'form-status success';
-  status.style.display = 'block';
-  status.textContent = '✓ Your email client has opened with the message pre-filled. Just hit send!';
-  btn.textContent = 'Message Ready to Send ✓';
   btn.disabled = true;
+  btn.textContent = 'Sending…';
 
-  setTimeout(()=>{
+  try {
+    // Submit to Google Forms via hidden iframe (avoids CORS/redirect issues)
+    await submitToGoogleForm(formData);
+
+    // Success
+    status.className = 'form-status success';
+    status.style.display = 'block';
+    status.textContent = '✓ Message received! Krishna will get back to you within 24 hours.';
+    btn.textContent = '✓ Sent!';
+    btn.style.background = 'var(--success)';
+    document.getElementById('f-name').value    = '';
+    document.getElementById('f-email').value   = '';
+    document.getElementById('f-subject').value = '';
+    document.getElementById('f-org').value     = '';
+    document.getElementById('f-msg').value     = '';
+
+    setTimeout(()=>{
+      btn.textContent = 'Send Message';
+      btn.disabled = false;
+      btn.style.background = '';
+      status.style.display = 'none';
+    }, 7000);
+
+  } catch(err) {
+    status.className = 'form-status error';
+    status.style.display = 'block';
+    status.textContent = '✗ Failed to send. Please email directly: krishnavamsi1017@gmail.com';
     btn.textContent = 'Send Message';
     btn.disabled = false;
-    status.style.display = 'none';
-  }, 6000);
-}
-
-/* ══════════════════════════════════════
-   AI CHAT — OpenAI GPT-4o
-══════════════════════════════════════ */
-let chatHistory = [];
-
-function promptKey(){
-  const k = prompt('Enter your OpenAI API key (sk-...):\n\nGet one at platform.openai.com\nYour key is stored only in this browser session.');
-  if(k && k.startsWith('sk-')){
-    OPENAI_KEY = k;
-    showToast('✓ API key set. Chat is now active.');
-  } else if(k){
-    showToast('That doesn\'t look like a valid key. Keys start with sk-');
+    console.error('Form submission error:', err);
   }
 }
 
-function suggest(q){
-  document.getElementById('chat-input').value = q;
-  // Hide suggestions after first use
-  document.getElementById('chat-suggestions').style.display = 'none';
+function submitToGoogleForm(formData) {
+  return new Promise((resolve, reject) => {
+    // Create a temporary form and submit it into the hidden iframe
+    const form = document.createElement('form');
+    form.method = 'POST';
+    form.action = FORM_ACTION;
+    form.target = 'hidden_iframe';
+    form.style.display = 'none';
+
+    for (const [key, value] of formData.entries()) {
+      const input = document.createElement('input');
+      input.type = 'hidden';
+      input.name = key;
+      input.value = value;
+      form.appendChild(input);
+    }
+
+    document.body.appendChild(form);
+
+    // Listen for iframe load = submission completed
+    const iframe = document.getElementById('hidden_iframe');
+    const onLoad = () => {
+      iframe.removeEventListener('load', onLoad);
+      document.body.removeChild(form);
+      resolve();
+    };
+    iframe.addEventListener('load', onLoad);
+
+    // Timeout fallback — Google Forms sometimes doesn't fire load event cross-origin
+    const timeout = setTimeout(() => {
+      iframe.removeEventListener('load', onLoad);
+      document.body.removeChild(form);
+      resolve(); // Resolve anyway — submission likely succeeded
+    }, 3500);
+
+    form.submit();
+  });
+}
+
+/* ══════════════════════════════════════════════════════
+   AI CHAT — Netlify Function · No API key in browser
+   Same-domain call → /api/chat → netlify/functions/chat.js
+   BACKEND_URL is intentionally empty string (same origin).
+══════════════════════════════════════════════════════ */
+
+const BACKEND_URL = '';   // empty = same Netlify domain
+
+// ── SUGGESTION CATEGORIES ──
+const CATEGORIES = {
+  all: [
+    { label: 'IEEE Research Paper', q: 'Tell me about his IEEE research paper and what makes it significant.' },
+    { label: 'Why Hire Him?',       q: 'Give me a strong case for why I should hire Krishna Vamsi.' },
+    { label: 'Top Skills',          q: 'What are his strongest technical skills?' },
+    { label: 'All Projects',        q: 'Walk me through all of his projects with the key results.' },
+    { label: 'Availability',        q: 'When can he start and what roles is he open to?' },
+  ],
+  research: [
+    { label: 'SAR Detection Method', q: 'How did he approach SAR aircraft detection technically?' },
+    { label: 'Accuracy Results',     q: 'What accuracy did he achieve in his IEEE paper and how?' },
+    { label: 'GLCM & CLAHE',         q: 'What are GLCM and CLAHE and why did he use them?' },
+    { label: 'Read the Paper',       q: 'Where can I find his published IEEE paper?' },
+  ],
+  projects: [
+    { label: 'Face Recognition',     q: 'Tell me about his Face Recognition project with Vision Transformers.' },
+    { label: 'Anomaly Detection',    q: 'Explain the Train Wagon Anomaly Detection system he built.' },
+    { label: 'Behavioral Monitoring',q: 'What is the Behavioral Change Monitoring software?' },
+    { label: 'Deployed Systems',     q: 'Which of his projects are deployed or production-ready?' },
+  ],
+  skills: [
+    { label: 'Computer Vision Stack',q: 'What is his computer vision tech stack?' },
+    { label: 'LLM & NLP Skills',     q: 'What experience does he have with LLMs and NLP?' },
+    { label: 'Deployment Skills',    q: 'What deployment and MLOps skills does he have?' },
+    { label: 'Best Skill',           q: 'What is he single best at technically?' },
+  ],
+  hiring: [
+    { label: 'Best Fit Roles',   q: 'What kinds of roles is he the best fit for?' },
+    { label: 'Start Date',       q: 'When can he start working?' },
+    { label: 'Contact Details',  q: 'How can I get in touch with Krishna Vamsi?' },
+    { label: 'Fresher Advantage',q: 'What advantage does hiring him as a fresher give my company?' },
+  ],
+};
+
+// Conversation history stored as [{role:'user'|'assistant', content:string}]
+// Capped at 16 messages (8 turns) before sending to backend
+let chatHistory    = [];
+let activeCategory = 'all';
+let isTyping       = false;
+
+// ── INIT ──
+(function init() {
+  renderSuggestions('all');
+})();
+
+// ── CATEGORY CHIPS ──
+function setCategory(cat, el) {
+  activeCategory = cat;
+  document.querySelectorAll('.chat-cat-btn').forEach(b => b.classList.remove('active'));
+  el.classList.add('active');
+  renderSuggestions(cat);
+}
+
+function renderSuggestions(cat) {
+  const wrap  = document.getElementById('chat-suggestions');
+  const items = CATEGORIES[cat] || CATEGORIES.all;
+  wrap.innerHTML = items.map(s =>
+    `<button class="chat-suggest-btn" onclick="suggest(${JSON.stringify(s.q)})">${s.label}</button>`
+  ).join('');
+}
+
+// FIX #15: clear input BEFORE setting chip text — no race with typed text
+function suggest(q) {
+  const input = document.getElementById('chat-input');
+  input.value = '';
+  input.value = q;
+  updateCounter();
   sendChat();
 }
 
-async function sendChat(){
+// FIX #19: live character counter
+function updateCounter() {
+  const input   = document.getElementById('chat-input');
+  const counter = document.getElementById('char-counter');
+  if (!counter) return;
+  const len = input.value.length;
+  counter.textContent = len + ' / 500';
+  counter.style.color = len >= 480 ? '#ef4444' : len >= 400 ? '#f59e0b' : 'var(--text-muted)';
+  if (!isTyping) document.getElementById('chat-send').disabled = len > 500;
+}
+
+// ── SEND CHAT ──
+async function sendChat() {
+  if (isTyping) return;
+
   const input = document.getElementById('chat-input');
   const msg   = input.value.trim();
-  if(!msg) return;
+  if (!msg) return;
 
-  if(OPENAI_KEY === 'YOUR_OPENAI_API_KEY' || !OPENAI_KEY){
-    const k = prompt('Enter your OpenAI API key to enable the chat (get one at platform.openai.com):');
-    if(k && k.startsWith('sk-')){ OPENAI_KEY = k; }
-    else { showToast('Please set a valid OpenAI API key first.'); return; }
+  if (msg.length > 500) {
+    showToast('Message is too long — 500 characters max.');
+    return;
   }
 
   input.value = '';
-  addMsg(msg, 'user');
-  chatHistory.push({ role:'user', content:msg });
-  const typing = addTyping();
+  updateCounter();
 
+  // FIX #14: push user message BEFORE rendering so rapid second
+  // requests always see the correct history state
+  chatHistory.push({ role: 'user', content: msg });
+  if (chatHistory.length > 24) chatHistory = chatHistory.slice(-24);
+
+  addMsg(msg, 'user');
+
+  const typing  = addTyping();
   const sendBtn = document.getElementById('chat-send');
   sendBtn.disabled = true;
+  isTyping         = true;
+
+  const historyToSend = chatHistory.slice(-16);
+
+  // FIX #16: declare controller + timer BEFORE try so clearTimeout
+  // in finally is always reachable regardless of throw path
+  const controller = new AbortController();
+  const abortTimer = setTimeout(() => controller.abort(), 15000);
 
   try {
-    const res = await fetch('https://api.openai.com/v1/chat/completions', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-        'Authorization': 'Bearer ' + OPENAI_KEY
-      },
-      body: JSON.stringify({
-        model: 'gpt-4o',
-        max_tokens: 600,
-        messages: [
-          { role: 'system', content: BIO },
-          ...chatHistory
-        ]
-      })
+    const res = await fetch(`${BACKEND_URL}/api/chat`, {
+      method:  'POST',
+      headers: { 'Content-Type': 'application/json' },
+      signal:  controller.signal,
+      body:    JSON.stringify({ message: msg, history: historyToSend }),
     });
 
-    const data = await res.json();
     typing.remove();
 
-    if(data.error){
-      const errMsg = data.error.code === 'invalid_api_key'
-        ? 'Invalid API key. Please check and try again.'
-        : 'API error: ' + data.error.message;
+    if (!res.ok) {
+      const errData = await res.json().catch(() => ({}));
+      const errMsg  = res.status === 429
+        ? '⏱ Too many questions — please wait a moment.'
+        : res.status === 504
+        ? '⏱ AI response timed out. Please try again.'
+        : res.status >= 500
+        ? '⚠️ AI service is temporarily unavailable. Please try again shortly.'
+        : (errData.error || 'Something went wrong. Please try again.');
+      // FIX #18: errors NOT pushed to chatHistory; roll back user msg
+      chatHistory.pop();
       addMsg(errMsg, 'ai');
       return;
     }
 
-    const reply = data.choices?.[0]?.message?.content || 'Sorry, I could not generate a response.';
-    chatHistory.push({ role:'assistant', content: reply });
-    if(chatHistory.length > 20) chatHistory = chatHistory.slice(-20);
+    const data  = await res.json();
+    const reply = data.reply || 'Sorry, I could not generate a response.';
+
+    // FIX #14: only assistant reply pushed here; user already pushed above
+    chatHistory.push({ role: 'assistant', content: reply });
+    if (chatHistory.length > 24) chatHistory = chatHistory.slice(-24);
+
     addMsg(reply, 'ai');
 
-  } catch(e) {
+  } catch (e) {
     typing.remove();
-    addMsg('Connection error. Please check your internet connection and try again.', 'ai');
+    const errMsg = e.name === 'AbortError'
+      ? '⏱ Response timed out. Please try again.'
+      : '🔌 Cannot reach the AI server. Make sure the backend is running.';
+    // FIX #18: roll back user message on failure
+    chatHistory.pop();
+    addMsg(errMsg, 'ai');
   } finally {
+    // FIX #16: always clears timer — no dangling 15 s timeout
+    clearTimeout(abortTimer);
     sendBtn.disabled = false;
+    isTyping         = false;
     input.focus();
+    updateCounter();
   }
 }
 
-function addMsg(text, type){
+// ── DOM HELPERS ─────────────────────────────────────────
+
+// FIX #21: rAF ensures scroll runs after browser reflow
+function scrollFeed(feed) {
+  requestAnimationFrame(() => { feed.scrollTop = feed.scrollHeight; });
+}
+
+function addMsg(text, type) {
   const wrap = document.createElement('div');
   wrap.className = 'chat-msg ' + type;
+
   const sender = document.createElement('div');
-  sender.className = 'chat-msg-sender';
+  sender.className   = 'chat-msg-sender';
   sender.textContent = type === 'ai' ? 'AI Assistant' : 'You';
+
   const bubble = document.createElement('div');
   bubble.className = 'chat-bubble';
-  bubble.textContent = text;
+  // FIX #17: [^\n]*? prevents **bold** bleeding across paragraphs
+  bubble.innerHTML = escapeHtml(text)
+    .replace(/\*\*([^\n]*?)\*\*/g, '<strong>$1</strong>')
+    .replace(/\n/g, '<br>');
+
   wrap.appendChild(sender);
   wrap.appendChild(bubble);
+
   const feed = document.getElementById('chat-messages');
   feed.appendChild(wrap);
-  feed.scrollTop = feed.scrollHeight;
+  scrollFeed(feed);
   return wrap;
 }
 
-function addTyping(){
+function addTyping() {
   const wrap = document.createElement('div');
   wrap.className = 'chat-msg ai chat-typing';
+
   const sender = document.createElement('div');
-  sender.className = 'chat-msg-sender';
+  sender.className   = 'chat-msg-sender';
   sender.textContent = 'AI Assistant';
+
   const bubble = document.createElement('div');
   bubble.className = 'chat-bubble';
-  bubble.innerHTML = '<div class="typing-dot"></div><div class="typing-dot"></div><div class="typing-dot"></div>';
+  bubble.innerHTML  = '<div class="typing-dot"></div><div class="typing-dot"></div><div class="typing-dot"></div>';
+
   wrap.appendChild(sender);
   wrap.appendChild(bubble);
+
   const feed = document.getElementById('chat-messages');
   feed.appendChild(wrap);
-  feed.scrollTop = feed.scrollHeight;
+  scrollFeed(feed);
   return wrap;
+}
+
+function escapeHtml(str) {
+  return str
+    .replace(/&/g,  '&amp;')
+    .replace(/</g,  '&lt;')
+    .replace(/>/g,  '&gt;')
+    .replace(/"/g,  '&quot;');
 }
 </script>
 </body>

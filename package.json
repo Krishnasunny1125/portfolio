@@ -1,0 +1,9 @@
+{
+  "name": "krishnavamsi-portfolio-netlify",
+  "version": "2.0.0",
+  "description": "Portfolio + Netlify Function for Gemini AI chat",
+  "engines": { "node": ">=18.0.0" },
+  "dependencies": {
+    "@google/generative-ai": "^0.21.0"
+  }
+}

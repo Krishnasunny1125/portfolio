@@ -30,6 +30,58 @@
   position: relative;
   overflow: hidden;
 }
+
+/* ── HERO PHOTO ── */
+.hero-photo-wrap {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  margin-bottom: 1.5rem;
+}
+.hero-photo {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  border: 3px solid rgba(147,197,253,0.5);
+  background: rgba(147,197,253,0.1);
+  overflow: hidden;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  color: #93c5fd;
+  box-shadow: 0 0 0 5px rgba(147,197,253,0.08);
+}
+.hero-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+  display: block;
+}
+.hero-photo-meta {}
+.hero-photo-name {
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 0.2rem;
+}
+.hero-photo-badges {
+  display: flex;
+  gap: 0.4rem;
+  flex-wrap: wrap;
+}
+.hero-photo-badge {
+  font-size: 0.65rem;
+  font-weight: 600;
+  padding: 0.18rem 0.55rem;
+  border-radius: 20px;
+  background: rgba(147,197,253,0.12);
+  color: #93c5fd;
+  border: 1px solid rgba(147,197,253,0.2);
+  letter-spacing: 0.03em;
+}
 .hero::before {
   content: '';
   position: absolute;
@@ -254,6 +306,7 @@
   .hero-stats-card { flex-direction: row; flex-wrap: wrap; }
   .hero-stat { flex: 1; min-width: 130px; border-bottom: none; border-right: 1px solid rgba(255,255,255,0.07); padding-bottom: 0; padding-right: 1.25rem; }
   .hero-stat:last-child { border-right: none; }
+  .hero-photo { width: 68px; height: 68px; font-size: 1.6rem; }
 }
 @media (max-width: 600px) {
   .hero-stats-card { flex-direction: column; }
@@ -272,7 +325,6 @@
       <li><a href="about.html">About</a></li>
       <li><a href="projects.html">Projects</a></li>
       <li><a href="skills.html">Skills</a></li>
-      <li><a href="resume.html">Resume</a></li>
       <li><a href="contact.html">Contact</a></li>
     </ul>
     <button class="nav-hamburger" onclick="toggleNav()" aria-label="Menu">&#9776;</button>
@@ -283,7 +335,6 @@
   <a href="about.html">About</a>
   <a href="projects.html">Projects</a>
   <a href="skills.html">Skills</a>
-  <a href="resume.html">Resume</a>
   <a href="contact.html">Contact</a>
 </div>
 <div class="otw-strip">
@@ -297,13 +348,31 @@
 <section class="hero">
   <div class="hero-inner">
     <div class="hero-left">
+      <!-- PROFILE PHOTO — swap src with your real photo file -->
+      <div class="hero-photo-wrap">
+        <div class="hero-photo" id="hero-photo-el">
+          <!-- Auto-loads photo.jpg from the same folder. Drop your headshot there and it appears. -->
+          <img src="profile.jpg" alt="Krishna Vamsi Prathipati"
+            onerror="this.style.display='none';this.parentElement.innerHTML='👤';"
+            style="width:100%;height:100%;object-fit:cover;border-radius:50%;display:block;">
+        </div>
+        <div class="hero-photo-meta">
+          <div class="hero-photo-name">Krishna Vamsi Prathipati</div>
+          <div class="hero-photo-badges">
+            <span class="hero-photo-badge">IEEE Published</span>
+            <span class="hero-photo-badge">CGPA 8.85</span>
+            <span class="hero-photo-badge" style="background:rgba(52,211,153,0.12);color:#6ee7b7;border-color:rgba(52,211,153,0.2);">● Available</span>
+          </div>
+        </div>
+      </div>
       <div class="hero-eyebrow">AI &amp; Data Science Specialist</div>
       <h1>Krishna Vamsi<br><em>Prathipati</em></h1>
-      <p class="hero-role">B.Tech AI &amp; Data Science · Graduating May 2026</p>
-      <p class="hero-bio">Computer Vision researcher with an IEEE published paper, building real-time ML systems using YOLOv8, Vision Transformers, and LLM integrations. CGPA 8.85 · Vijayawada, India.</p>
+      <p class="hero-role">B.Tech AI &amp; Data Science · <strong style="color:#93c5fd;">Graduating May 2026 · Open to Hire</strong></p>
+      <p class="hero-bio">IEEE-published Computer Vision researcher building production-grade ML systems with YOLOv8, Vision Transformers &amp; LLM integrations. 3 deployed projects · 95–98% accuracy · CGPA 8.85 · Vijayawada, India.</p>
       <div class="hero-actions">
         <a href="projects.html" class="btn btn-primary">View Projects</a>
-        <a href="contact.html" class="btn btn-outline" style="border-color:rgba(255,255,255,0.3);color:#fff;">Get in Touch</a>
+        <a href="resume.pdf" download="Krishna_Vamsi_Prathipati_Resume.pdf" class="btn btn-outline" style="border-color:#93c5fd;color:#93c5fd;">⬇ Download Resume</a>
+        <a href="contact.html" class="btn btn-outline" style="border-color:rgba(255,255,255,0.3);color:rgba(255,255,255,0.75);">Get in Touch</a>
       </div>
       <div class="hero-links">
         <a href="mailto:krishnavamsi1017@gmail.com" class="hero-link">
@@ -447,7 +516,6 @@
     <a href="tel:+919491710154">+91 94917 10154</a> &nbsp;&bull;&nbsp;
     <a href="https://linkedin.com/in/KrishnaVamsiPrathipati" target="_blank" rel="noopener">LinkedIn</a> &nbsp;&bull;&nbsp;
     <a href="https://github.com/Krishnasunny1125" target="_blank" rel="noopener">GitHub</a> &nbsp;&bull;&nbsp;
-    <a href="resume.html">Resume</a> &nbsp;&bull;&nbsp;
     <a href="https://doi.org/10.1109/INSPECT63485.2024.10896234" target="_blank" rel="noopener">IEEE Paper</a>
   </p>
 </footer>

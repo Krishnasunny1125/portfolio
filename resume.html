@@ -9,27 +9,86 @@
 <meta name="author" content="Krishna Vamsi Prathipati">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Resume — Krishna Vamsi Prathipati">
-<meta property="og:description" content="IEEE Published AI & Data Science Engineer. CGPA 8.85. Graduating May 2026. Python, PyTorch, YOLOv8, Vision Transformers.">
+<meta property="og:description" content="IEEE Published AI & Data Science Engineer. CGPA 8.85. Graduating May 2026.">
 <link rel="canonical" href="https://krishnavamsi.dev/resume.html">
 <link rel="stylesheet" href="style.css">
 <style>
-/* ── PHOTO PLACEHOLDER ── */
-.resume-photo {
-  width: 80px; height: 80px;
-  border-radius: 50%;
-  background: rgba(147,197,253,0.15);
-  border: 2px solid rgba(147,197,253,0.3);
-  display: flex; align-items: center; justify-content: center;
-  font-size: 1.8rem;
-  flex-shrink: 0;
+.pdf-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
   overflow: hidden;
+  box-shadow: var(--shadow-sm);
 }
-.resume-photo img {
-  width: 100%; height: 100%;
-  object-fit: cover;
-  border-radius: 50%;
+.pdf-toolbar {
+  background: var(--navy);
+  padding: 1rem 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: .75rem;
 }
-.resume-header-left { display: flex; align-items: center; gap: 1.5rem; flex-wrap: wrap; }
+.pdf-toolbar-info {
+  display: flex;
+  align-items: center;
+  gap: .85rem;
+}
+.pdf-icon {
+  width: 38px; height: 38px;
+  background: rgba(147,197,253,0.12);
+  border: 1px solid rgba(147,197,253,0.25);
+  border-radius: var(--radius-sm);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 1.1rem;
+  flex-shrink: 0;
+}
+.pdf-filename {
+  font-size: .88rem;
+  font-weight: 700;
+  color: #fff;
+}
+.pdf-filemeta {
+  font-size: .72rem;
+  color: rgba(255,255,255,.5);
+  margin-top: .1rem;
+}
+.pdf-actions { display: flex; gap: .6rem; flex-wrap: wrap; }
+.pdf-body { position: relative; width: 100%; background: #f1f5f9; }
+#pdf-frame {
+  width: 100%;
+  height: 86vh;
+  min-height: 600px;
+  border: none;
+  display: block;
+}
+.pdf-fallback {
+  display: none;
+  padding: 4rem 2rem;
+  text-align: center;
+}
+.pdf-fallback-icon { font-size: 3rem; margin-bottom: 1rem; }
+.pdf-fallback-title { font-size: 1.05rem; font-weight: 700; color: var(--text); margin-bottom: .5rem; }
+.pdf-fallback-desc {
+  font-size: .875rem;
+  color: var(--text-secondary);
+  max-width: 400px;
+  margin: 0 auto 1.75rem;
+  line-height: 1.7;
+}
+.pdf-fallback-tree {
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  padding: 1rem 1.25rem;
+  display: inline-block;
+  text-align: left;
+  font-size: .82rem;
+  color: var(--text-secondary);
+  line-height: 1.9;
+  font-family: monospace;
+  margin-bottom: 1.5rem;
+}
 </style>
 </head>
 <body>
@@ -67,197 +126,69 @@
   <div class="container">
     <div class="page-header-tag">Curriculum Vitae</div>
     <h1>Resume</h1>
-    <p>Download, print, or share. Last updated May 2026.</p>
+    <p>Last updated May 2026 &mdash; B.Tech AI &amp; Data Science · IEEE Published · CGPA 8.85</p>
   </div>
 </div>
 
 <div class="main">
   <div class="container">
-    <div class="resume-wrap">
 
-      <!-- Print hint -->
-      <div class="print-bar reveal">
-        <span>💡 To save as PDF: Click <strong>Download PDF</strong> or use <strong>Ctrl+P → Save as PDF</strong> in your browser.</span>
-        <div style="display:flex;gap:.6rem;flex-wrap:wrap;">
-          <button class="btn btn-primary btn-sm" onclick="window.print()">🖨 Print / Save PDF</button>
-          <button class="btn btn-ghost btn-sm" onclick="copyEmail()">📋 Copy Email</button>
-        </div>
-      </div>
-
-      <!-- Header Card -->
-      <div class="resume-header-card reveal">
-        <div class="resume-header-left">
-          <!-- Profile photo — replace src with your actual photo URL -->
-          <div class="resume-photo">
-            <!-- <img src="photo.jpg" alt="Krishna Vamsi Prathipati"> -->
-            👤
-          </div>
+    <div class="pdf-card reveal">
+      <!-- Toolbar -->
+      <div class="pdf-toolbar">
+        <div class="pdf-toolbar-info">
+          <div class="pdf-icon">📄</div>
           <div>
-            <div class="resume-name">Krishna Vamsi Prathipati</div>
-            <div class="resume-title-line">AI &amp; Data Science Engineer · IEEE Published Researcher · Computer Vision Specialist</div>
-            <div class="resume-contacts">
-              <div class="resume-contact-item">
-                <span>✉</span>
-                <a href="mailto:krishnavamsi1017@gmail.com">krishnavamsi1017@gmail.com</a>
-              </div>
-              <div class="resume-contact-item">
-                <span>📞</span>
-                <a href="tel:+919491710154">+91 94917 10154</a>
-              </div>
-              <div class="resume-contact-item">
-                <span>📍</span> Vijayawada, Andhra Pradesh, India
-              </div>
-              <div class="resume-contact-item">
-                <span>💼</span>
-                <a href="https://linkedin.com/in/KrishnaVamsiPrathipati" target="_blank" rel="noopener">linkedin.com/in/KrishnaVamsiPrathipati</a>
-              </div>
-              <div class="resume-contact-item">
-                <span>🐙</span>
-                <a href="https://github.com/Krishnasunny1125" target="_blank" rel="noopener">github.com/Krishnasunny1125</a>
-              </div>
-              <div class="resume-contact-item">
-                <span>📄</span>
-                <a href="https://doi.org/10.1109/INSPECT63485.2024.10896234" target="_blank" rel="noopener">IEEE DOI ↗</a>
-              </div>
-            </div>
+            <div class="pdf-filename">Krishna_Vamsi_Prathipati_Resume.pdf</div>
+            <div class="pdf-filemeta">AI &amp; Data Science Engineer · IEEE Published · CGPA 8.85</div>
           </div>
         </div>
-        <div class="resume-download-btns">
-          <button class="btn btn-primary btn-sm" onclick="window.print()">Download PDF</button>
-          <a href="contact.html" class="btn btn-ghost btn-sm" style="border-color:rgba(255,255,255,.3);color:#fff;text-align:center;">Contact Me</a>
+        <div class="pdf-actions">
+          <a href="resume.pdf"
+             download="Krishna_Vamsi_Prathipati_Resume.pdf"
+             class="btn btn-primary btn-sm"
+             id="pdf-download-btn">
+            ⬇ Download PDF
+          </a>
+          <a href="resume.pdf"
+             target="_blank"
+             rel="noopener"
+             class="btn btn-ghost btn-sm"
+             style="border-color:rgba(255,255,255,.3);color:#fff;"
+             id="pdf-open-btn">
+            ↗ Open in New Tab
+          </a>
         </div>
       </div>
 
-      <!-- Profile Summary -->
-      <div class="resume-section reveal">
-        <div class="resume-section-title">Professional Summary</div>
-        <p style="font-size:.9rem;color:var(--text-secondary);line-height:1.8;">
-          Final-year B.Tech student in Artificial Intelligence &amp; Data Science (CGPA 8.85) with a published IEEE research paper achieving <strong>95.3% accuracy</strong> on satellite SAR image analysis using enhanced YOLOv8. Experienced in building end-to-end deep learning pipelines — from dataset curation and model design through Flask API deployment — with expertise in Computer Vision, NLP, and LLM integration. Smart India Hackathon 2023 National Finalist. Available for full-time AI/ML engineering roles and research internships from May 2026.
-        </p>
-      </div>
+      <!-- PDF body -->
+      <div class="pdf-body">
+        <iframe
+          id="pdf-frame"
+          src="resume.pdf"
+          title="Krishna Vamsi Prathipati Resume">
+        </iframe>
 
-      <!-- Education -->
-      <div class="resume-section reveal">
-        <div class="resume-section-title">Education</div>
-        <div class="resume-item">
-          <div class="resume-item-header">
-            <div class="resume-item-title">Bachelor of Technology — Artificial Intelligence &amp; Data Science</div>
-            <div class="resume-item-date">Nov 2022 – May 2026</div>
+        <!-- Fallback — only shown when resume.pdf is missing -->
+        <div class="pdf-fallback" id="pdf-fallback">
+          <div class="pdf-fallback-icon">📄</div>
+          <div class="pdf-fallback-title">resume.pdf not found</div>
+          <p class="pdf-fallback-desc">
+            Add a file named <strong>resume.pdf</strong> to your portfolio folder and it will appear here automatically.
+          </p>
+          <div class="pdf-fallback-tree">
+            📁 portfolio/<br>
+            &nbsp;&nbsp;├── index.html<br>
+            &nbsp;&nbsp;├── resume.html<br>
+            &nbsp;&nbsp;├── style.css<br>
+            &nbsp;&nbsp;└── <strong style="color:var(--accent);">resume.pdf</strong> ← add this
           </div>
-          <div class="resume-item-sub">Velagapudi Ramakrishna Siddhartha Engineering College · Vijayawada, Andhra Pradesh</div>
-          <ul class="resume-bullets">
-            <li>CGPA: <strong>8.85 / 10.0</strong></li>
-            <li>Specialisation in Computer Vision, Deep Learning, NLP, and Data Science</li>
-            <li>Published IEEE research paper during third year of study</li>
-            <li>National Finalist — Smart India Hackathon 2023 (Govt. of India)</li>
-          </ul>
+          <br>
+          <button class="btn btn-primary btn-sm" onclick="retryPdf()">↺ Retry</button>
         </div>
       </div>
-
-      <!-- Research Publication -->
-      <div class="resume-section reveal">
-        <div class="resume-section-title">Research Publication</div>
-        <div class="resume-item">
-          <div class="resume-item-header">
-            <div class="resume-item-title">Detection of Aircraft from SAR Images Using Deep Neural Networks</div>
-            <div class="resume-item-date">2024</div>
-          </div>
-          <div class="resume-item-sub">IEEE INSPECT 2024 · DOI: 10.1109/INSPECT63485.2024.10896234</div>
-          <ul class="resume-bullets">
-            <li>Designed enhanced YOLOv8 architecture with GLCM texture features and CLAHE preprocessing on TerraSAR-X satellite dataset (844 images)</li>
-            <li>Replaced conventional colour-based features with texture analysis for robustness against weather and urban noise</li>
-            <li>Achieved <strong>95.3% accuracy</strong>, <strong>93% precision</strong>, and <strong>91% F1-score</strong> in noisy real-world conditions</li>
-          </ul>
-          <div style="margin-top:.5rem;">
-            <span class="badge orange" style="font-size:.7rem;">IEEE Peer Reviewed</span>
-          </div>
-        </div>
-      </div>
-
-      <!-- Projects -->
-      <div class="resume-section reveal">
-        <div class="resume-section-title">Projects</div>
-
-        <div class="resume-item">
-          <div class="resume-item-header">
-            <div class="resume-item-title">Face Recognition using Vision Transformers (ViT)</div>
-            <div class="resume-item-date">2023</div>
-          </div>
-          <div class="resume-item-sub">PyTorch · Vision Transformers · Haar Cascades · OpenCV</div>
-          <ul class="resume-bullets">
-            <li>Optimized ViT pipeline with Haar Cascade ROI extraction on a 2,100-image dataset</li>
-            <li>Designed low-latency detection pipeline enabling real-time high-density face tracking</li>
-            <li>Achieved <strong>98.24% accuracy</strong> — highest among tested architectures on this dataset</li>
-          </ul>
-        </div>
-
-        <div class="resume-item">
-          <div class="resume-item-header">
-            <div class="resume-item-title">Train Wagon Anomaly Detection System</div>
-            <div class="resume-item-date">2024</div>
-          </div>
-          <div class="resume-item-sub">YOLOv8 · OpenCV · Flask · Telegram API</div>
-          <ul class="resume-bullets">
-            <li>Developed and deployed YOLOv8 + OpenCV system for live CCTV video stream anomaly detection</li>
-            <li>Reduced inference latency to <strong>~2 seconds</strong> end-to-end; integrated Telegram instant alert system</li>
-            <li>Achieved <strong>96.6% detection accuracy</strong> on production video streams</li>
-          </ul>
-        </div>
-
-        <div class="resume-item">
-          <div class="resume-item-header">
-            <div class="resume-item-title">Behavioral Change Monitoring Software</div>
-            <div class="resume-item-date">2023–2024</div>
-          </div>
-          <div class="resume-item-sub">Flask · GPT-4 API · NLTK · Matplotlib · Seaborn</div>
-          <ul class="resume-bullets">
-            <li>Built Flask web dashboard integrating GPT-4 API and NLTK for real-time multi-class sentiment analysis</li>
-            <li>Optimized API preprocessing pipeline to significantly reduce token usage and operational costs</li>
-            <li>Visualized behavioral trend data with interactive Matplotlib/Seaborn charts</li>
-          </ul>
-        </div>
-      </div>
-
-      <!-- Skills -->
-      <div class="resume-section reveal">
-        <div class="resume-section-title">Technical Skills</div>
-        <div class="resume-skills-grid">
-          <div class="resume-skill-cat">
-            <div class="resume-skill-cat-name">Deep Learning</div>
-            <div class="resume-skill-list">PyTorch · TensorFlow · YOLOv8 · Vision Transformers (ViT) · OpenCV · Haar Cascades · GLCM · CLAHE</div>
-          </div>
-          <div class="resume-skill-cat">
-            <div class="resume-skill-cat-name">Programming</div>
-            <div class="resume-skill-list">Python · NumPy · Pandas · scikit-learn · SQL / MySQL · Java · C</div>
-          </div>
-          <div class="resume-skill-cat">
-            <div class="resume-skill-cat-name">NLP &amp; Gen AI</div>
-            <div class="resume-skill-list">GPT-4 API · NLTK · Prompt Engineering · Sentiment Analysis · LLM Integration</div>
-          </div>
-          <div class="resume-skill-cat">
-            <div class="resume-skill-cat-name">Deployment &amp; Tools</div>
-            <div class="resume-skill-list">Flask · RESTful APIs · Git / GitHub · Power BI · Tableau · Matplotlib · Seaborn · RPA</div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Achievements & Certifications -->
-      <div class="resume-section reveal">
-        <div class="resume-section-title">Achievements &amp; Certifications</div>
-        <ul class="resume-bullets">
-          <li><strong>Smart India Hackathon 2023 — National Finalist</strong> · Government of India's national hackathon, selected from thousands of teams</li>
-          <li><strong>Infosys AI &amp; Deep Learning Certification</strong> · Infosys Springboard — covering neural architectures, optimization, and deployment</li>
-          <li><strong>Oracle Database Certification</strong> · Oracle — SQL and database management</li>
-          <li><strong>Volunteer Educator</strong> · Make A Difference (MAD), Vijayawada — taught structured Mathematics to Grade 5 and Grade 7 students</li>
-        </ul>
-      </div>
-
-      <!-- Add photo note -->
-      <div style="background:var(--tag-bg);border:1px solid #bfdbfe;border-radius:var(--radius-sm);padding:.85rem 1.1rem;font-size:.8rem;color:var(--accent);margin-top:1.25rem;" class="reveal">
-        💡 <strong>To add your photo:</strong> Replace the 👤 emoji in the resume header with <code style="background:#fff;padding:.1rem .3rem;border-radius:3px;font-size:.75rem;">&lt;img src="photo.jpg" alt="Krishna Vamsi"&gt;</code> — upload a square headshot to the same folder as your HTML files.
-      </div>
-
     </div>
+
   </div>
 </div>
 
@@ -274,7 +205,6 @@
     <a href="tel:+919491710154">+91 94917 10154</a> &nbsp;&bull;&nbsp;
     <a href="https://linkedin.com/in/KrishnaVamsiPrathipati" target="_blank" rel="noopener">LinkedIn</a> &nbsp;&bull;&nbsp;
     <a href="https://github.com/Krishnasunny1125" target="_blank" rel="noopener">GitHub</a> &nbsp;&bull;&nbsp;
-    <a href="resume.html">Resume</a> &nbsp;&bull;&nbsp;
     <a href="https://doi.org/10.1109/INSPECT63485.2024.10896234" target="_blank" rel="noopener">IEEE Paper</a>
   </p>
 </footer>
@@ -282,23 +212,35 @@
 <script>
 function toggleNav(){ document.getElementById('nav-mobile').classList.toggle('open'); }
 
-function copyEmail(){
-  navigator.clipboard.writeText('krishnavamsi1017@gmail.com').then(()=>{
-    const btn = event.target;
-    btn.textContent = '✓ Copied!';
-    setTimeout(()=>btn.textContent='📋 Copy Email', 2000);
-  });
+function retryPdf() {
+  document.getElementById('pdf-fallback').style.display = 'none';
+  const frame = document.getElementById('pdf-frame');
+  frame.style.display = 'block';
+  frame.src = 'resume.pdf?' + Date.now();
 }
 
-const ro = new IntersectionObserver(entries=>{
-  entries.forEach((el,i)=>{
-    if(el.isIntersecting){
-      setTimeout(()=>el.target.classList.add('in'), i*70);
+(function() {
+  fetch('resume.pdf', { method: 'HEAD' })
+    .then(r => { if (!r.ok) throw new Error(); })
+    .catch(() => {
+      document.getElementById('pdf-frame').style.display    = 'none';
+      document.getElementById('pdf-fallback').style.display = 'block';
+      ['pdf-download-btn','pdf-open-btn'].forEach(id => {
+        const el = document.getElementById(id);
+        if (el) { el.style.opacity = '.4'; el.style.pointerEvents = 'none'; }
+      });
+    });
+})();
+
+const ro = new IntersectionObserver(entries => {
+  entries.forEach((el,i) => {
+    if (el.isIntersecting) {
+      setTimeout(() => el.target.classList.add('in'), i * 70);
       ro.unobserve(el.target);
     }
   });
-},{threshold:.08});
-document.querySelectorAll('.reveal').forEach(el=>ro.observe(el));
+}, { threshold: .08 });
+document.querySelectorAll('.reveal').forEach(el => ro.observe(el));
 </script>
 </body>
 </html>

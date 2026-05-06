@@ -224,6 +224,7 @@
 @media(max-width:860px){
   .about-grid{grid-template-columns:1fr}
 }
+@keyframes msgFade { from{opacity:0;transform:translateY(6px)} to{opacity:1;transform:none} }
 </style>
 </head>
 <body>
@@ -236,7 +237,6 @@
       <li><a href="about.html" class="active">About</a></li>
       <li><a href="projects.html">Projects</a></li>
       <li><a href="skills.html">Skills</a></li>
-      <li><a href="resume.html">Resume</a></li>
       <li><a href="contact.html">Contact</a></li>
     </ul>
     <button class="nav-hamburger" onclick="toggleNav()" aria-label="Menu">&#9776;</button>
@@ -247,7 +247,6 @@
   <a href="about.html" class="active">About</a>
   <a href="projects.html">Projects</a>
   <a href="skills.html">Skills</a>
-  <a href="resume.html">Resume</a>
   <a href="contact.html">Contact</a>
 </div>
 <div class="otw-strip">
@@ -364,27 +363,6 @@
           </ul>
         </div>
 
-        <!-- Testimonials -->
-        <div class="reveal" style="margin-top:1.25rem;">
-          <p class="section-label" style="margin-bottom:.6rem;">Endorsements</p>
-          <div class="testimonials-grid">
-            <div class="testimonial-card">
-              <p class="testimonial-text">Krishna demonstrated exceptional depth in computer vision during his research. His ability to adapt YOLOv8 for SAR imagery — replacing colour features with texture analysis — showed real engineering maturity. The results speak for themselves: 95.3% accuracy in a noisy, real-world domain.</p>
-              <div class="testimonial-author">
-                <div class="testimonial-avatar">RK</div>
-                <div>
-                  <div class="testimonial-name">Prof. R. Kumar</div>
-                  <div class="testimonial-role">Research Supervisor · VR Siddhartha Engineering College</div>
-                </div>
-              </div>
-            </div>
-            <div class="testimonial-placeholder">
-              <strong>Add an endorsement here</strong>
-              Ask a professor, mentor, or hackathon organiser for a short quote and replace this placeholder. Even one real testimonial significantly increases recruiter trust.
-            </div>
-          </div>
-        </div>
-
         <!-- Keyword cloud for SEO -->
         <div class="card about-card reveal" style="margin-top:1.25rem;">
           <div class="about-section-title">Areas of Expertise</div>
@@ -465,15 +443,21 @@
     <a href="tel:+919491710154">+91 94917 10154</a> &nbsp;&bull;&nbsp;
     <a href="https://linkedin.com/in/KrishnaVamsiPrathipati" target="_blank" rel="noopener">LinkedIn</a> &nbsp;&bull;&nbsp;
     <a href="https://github.com/Krishnasunny1125" target="_blank" rel="noopener">GitHub</a> &nbsp;&bull;&nbsp;
-    <a href="resume.html">Resume</a> &nbsp;&bull;&nbsp;
     <a href="https://doi.org/10.1109/INSPECT63485.2024.10896234" target="_blank" rel="noopener">IEEE Paper</a>
   </p>
 </footer>
 
 <script>
-function toggleNav(){document.getElementById('nav-mobile').classList.toggle('open')}
-const ro=new IntersectionObserver(e=>{e.forEach((el,i)=>{if(el.isIntersecting){setTimeout(()=>el.target.classList.add('in'),i*80);ro.unobserve(el.target)}})},{threshold:.1});
+/* ── NAV ── */
+function toggleNav(){ document.getElementById('nav-mobile').classList.toggle('open'); }
+
+/* ── SCROLL REVEAL ── */
+const ro = new IntersectionObserver(e=>{
+  e.forEach((el,i)=>{ if(el.isIntersecting){ setTimeout(()=>el.target.classList.add('in'),i*80); ro.unobserve(el.target); } });
+},{threshold:.1});
 document.querySelectorAll('.reveal').forEach(el=>ro.observe(el));
+
+// About page init
 </script>
 </body>
 </html>

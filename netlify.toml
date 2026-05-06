@@ -1,0 +1,32 @@
+# ═══════════════════════════════════════════════════════
+# netlify.toml — Netlify configuration
+# ═══════════════════════════════════════════════════════
+
+[build]
+  # Root of your site (all HTML/CSS files)
+  publish = "."
+
+  # Netlify installs dependencies from package.json
+  # automatically before deploying functions
+  command = "npm install"
+
+  # Where your serverless functions live
+  functions = "netlify/functions"
+
+# ── URL redirect: /api/chat → the serverless function ──
+# This means your frontend calls /api/chat (same domain),
+# Netlify internally routes it to netlify/functions/chat.js
+# No CORS issues, no separate server, no extra config.
+[[redirects]]
+  from   = "/api/chat"
+  to     = "/.netlify/functions/chat"
+  status = 200
+
+# ── Security headers for all pages ─────────────────────
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options        = "DENY"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy        = "strict-origin-when-cross-origin"
+    Permissions-Policy     = "camera=(), microphone=(), geolocation=()"
