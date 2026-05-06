@@ -162,10 +162,63 @@
 
     <div class="projects-list">
 
-      <!-- Project 1 -->
-      <div class="proj-card reveal" data-cat="cv">
+      <!-- Project 1 — ScholarGraph Elite -->
+      <div class="proj-card reveal" data-cat="nlp deploy">
         <div class="proj-card-top">
           <div class="proj-num">01</div>
+          <div class="proj-badges">
+            <span class="badge blue">LangGraph</span>
+            <span class="badge purple">Multi-Agent</span>
+            <span class="badge green">Agentic AI</span>
+          </div>
+        </div>
+        <div class="proj-title">ScholarGraph Elite — Adversarial Agentic Research System</div>
+        <p class="proj-desc">
+          A production-grade multi-agent academic research pipeline using LangGraph with four specialised agents — planning, retrieval, validation, and reranking — that adversarially evaluates its own outputs and recursively rejects results below a quality threshold.
+        </p>
+        <div class="proj-highlights">
+          <div class="proj-highlight">
+            <div class="proj-highlight-label">Retrieval Strategy</div>
+            <div class="proj-highlight-val">Dual-pass</div>
+          </div>
+          <div class="proj-highlight">
+            <div class="proj-highlight-label">Agents</div>
+            <div class="proj-highlight-val">4 Stages</div>
+          </div>
+          <div class="proj-highlight">
+            <div class="proj-highlight-label">Ranking Signals</div>
+            <div class="proj-highlight-val">4 Weighted</div>
+          </div>
+        </div>
+        <div class="proj-details">
+          <div class="proj-detail-block">
+            <div class="proj-detail-label">Architecture</div>
+            <div class="proj-detail-text">Dual-pass search strategy combining relevance-ranked retrieval with citation-graph-informed retrieval, closely mirroring IR benchmarking and reranking systems in production.</div>
+          </div>
+          <div class="proj-detail-block">
+            <div class="proj-detail-label">Authority Weightage</div>
+            <div class="proj-detail-text">Custom ranking function: Abstract depth (40%) + Recency (35%) + Author signals (15%) + Title specificity (10%).</div>
+          </div>
+          <div class="proj-detail-block">
+            <div class="proj-detail-label">Adversarial Loop</div>
+            <div class="proj-detail-text">Outputs are recursively rejected and re-ranked if below quality threshold — simulating search comprehensiveness, result reliability, and citation-grounded generation.</div>
+          </div>
+        </div>
+        <div class="proj-tech">
+          <span class="tech-tag">LangGraph</span>
+          <span class="tech-tag">Python</span>
+          <span class="tech-tag">Multi-Agent</span>
+          <span class="tech-tag">RAG</span>
+          <span class="tech-tag">Citation Graphs</span>
+          <span class="tech-tag">IR Reranking</span>
+          <span class="tech-tag">Agentic AI</span>
+        </div>
+      </div>
+
+      <!-- Project 2 -->
+      <div class="proj-card reveal" data-cat="cv">
+        <div class="proj-card-top">
+          <div class="proj-num">02</div>
           <div class="proj-badges">
             <span class="badge orange">IEEE Published</span>
             <span class="badge">Computer Vision</span>
@@ -203,7 +256,7 @@
       <!-- Project 2 -->
       <div class="proj-card reveal" data-cat="cv">
         <div class="proj-card-top">
-          <div class="proj-num">02</div>
+          <div class="proj-num">03</div>
           <div class="proj-badges">
             <span class="badge">Computer Vision</span>
             <span class="badge green">Real-time</span>
@@ -238,7 +291,7 @@
       <!-- Project 3 -->
       <div class="proj-card reveal" data-cat="cv deploy">
         <div class="proj-card-top">
-          <div class="proj-num">03</div>
+          <div class="proj-num">04</div>
           <div class="proj-badges">
             <span class="badge">Computer Vision</span>
             <span class="badge green">Deployed</span>
@@ -273,7 +326,7 @@
       <!-- Project 4 -->
       <div class="proj-card reveal" data-cat="nlp deploy">
         <div class="proj-card-top">
-          <div class="proj-num">04</div>
+          <div class="proj-num">05</div>
           <div class="proj-badges">
             <span class="badge">NLP</span>
             <span class="badge">Generative AI</span>
